@@ -1,12 +1,11 @@
 grammar grama;
 
 grama
-	: funcao* 'main' '{' bloco '}' funcao*
+	: funcao* 'main' '{' bloco* '}' funcao*
 	;
 
 bloco
-	:
-	| declaraVariavel ';'
+	: declaraVariavel ';'
 	| atribuicaoVariavel ';'
 	| chamadaFuncao ';'
 	| if
@@ -18,7 +17,7 @@ declaraVariavel
 	;
 
 type
-    : 'int'
+  	: 'int'
 	| 'char'
 	| 'string'
 	| 'float'
@@ -68,8 +67,8 @@ atribuicaoVariavel
 
 // Colocar precedencia de parenteses e verificar prioriodades das operacoes artimeticas
 expressao
-    :
-	| (ID | chamadaFuncao) (operacaoAritmetica expressao)?
+	:
+	| (ID | chamadaFuncao | INT | FLOAT ) (operacaoAritmetica expressao)?
 	| '(' expressao ')'
 	;
 
@@ -80,11 +79,16 @@ operacaoAritmetica
 	| '/'
 	;
 
-ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
-    ;
+ID
+	: ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
+	;
 
-INT :	'0'..'9'+
-    ;
+INT	: '0'..'9'+
+	;
+
+FLOAT
+ 	: INT+ '.' INT+
+ 	;
 
 COMMENT
     :   '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
