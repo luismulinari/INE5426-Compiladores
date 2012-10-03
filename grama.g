@@ -1,16 +1,25 @@
 grammar grama;
 
 grama
-	: funcao* 'main' '{' bloco* '}' funcao*
+	: 'main' '{' bloco* '}'
 	;
 
 bloco
 	: declaraVariavel ';'
 	| atribuicaoVariavel ';'
 	| chamadaFuncao ';'
-	| if
-	| while
+	| definicao_if
+	| definicao_while
 	;
+
+definicao_if
+	 : 'if' '(' condicao ')' '{' bloco '}' ('else' '{' bloco '}')?
+	 ;
+
+definicao_while
+	: 'while' '(' condicao ')' '{' bloco '}'
+	;
+
 
 declaraVariavel
 	: type ID
@@ -28,22 +37,16 @@ funcao
 	;
 
 declaracaoSimbolo
-	: 'a'..'z' ID
+	: ID
 	;
-
-while
-	: 'while' '(' condicao ')' '{' bloco '}'
-	;
-
-if
-	 : 'if' '(' condicao ')' '{' bloco '}' ('else' '{' bloco '}')?
-	 ;
 
 condicao
 	: 'true'
 	| 'false'
-	| '(' ID (operacaoBooleana) ID ')' (operacaoBooleana condicao)?
+	| '(' (ID | INT) (operacaoBooleana) (ID | INT) ')' (operacaoBooleana condicao)?
+	|(ID | INT) (operacaoBooleana) (ID | INT)
 	;
+
 
 operacaoBooleana
 	: '!='
@@ -58,7 +61,7 @@ operacaoBooleana
 	;
 
 chamadaFuncao
-	 : ID '(' ID (',' ID )* ')'
+	 : ID '(' ID? (',' ID )* ')'
 	 ;
 
 atribuicaoVariavel
