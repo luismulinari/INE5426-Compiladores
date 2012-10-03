@@ -1,5 +1,117 @@
 grammar grama;
 
+// TOKENS
+
+GREATER
+	:	'>'
+	;
+
+GREATEREQUAL
+	:	'>='
+	;
+
+LESSEQUAL
+	:	'<='
+	;
+
+LESS
+	:	'<'
+	;
+
+WHILE
+	:	'while'
+	;
+
+IF
+	:	'if'
+	;
+
+LCURLY
+	:	'{'
+	;
+
+RCURLY
+	:	'}'
+	;
+
+ELSE
+	:	'else'
+	;
+
+LPAREN
+	:	'('
+	;
+
+RPAREN
+	:	')'
+	;
+
+MAIN
+	:	'main '
+	;
+
+T_INT
+	:	'int'
+	;
+
+T_CHAR
+	:	'char'
+	;
+
+T_STRING
+	:	'string'
+	;
+
+T_FLOAT
+	:	'float'
+	;
+
+TRUE
+	:	'true'
+	;
+
+FALSE
+	:	'false'
+	;
+
+NOTEQUAL
+	:	'!='
+	;
+
+EQUAL
+	:	'=='
+	;
+
+NOT
+	:	'~'
+	;
+
+OR
+	:	'||'
+	;
+
+AND
+	:	'&&'
+	;
+
+PLUS
+	:	'+'
+	;
+
+MINUS
+	:	'-'
+	;
+
+STAR
+	:	'*'
+	;
+
+SLASH
+	:	'/'
+	;
+// FIM TOKENS
+	
+
 grama
 	: MAIN LCURLY bloco* RCURLY
 	;
@@ -134,114 +246,3 @@ fragment
 UNICODE_ESC
     :   '\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
     ;
-
-
-// TOKENS
-
-GREATER
-	:	'>'
-	;
-
-GREATEREQUAL
-	:	'>='
-	;
-
-LESSEQUAL
-	:	'<='
-	;
-
-LESS
-	:	'<'
-	;
-
-WHILE
-	:	'while'
-	;
-
-IF
-	:	'if'
-	;
-
-LCURLY
-	:	'{'
-	;
-
-RCURLY
-	:	'}'
-	;
-
-ELSE
-	:	'else'
-	;
-
-LPAREN
-	:	'('
-	;
-
-RPAREN
-	:	')'
-	;
-
-MAIN
-	:	'main '
-	;
-
-T_INT
-	:	'int'
-	;
-
-T_CHAR
-	:	'char'
-	;
-
-T_STRING
-	:	'string'
-	;
-
-T_FLOAT
-	:	'float'
-	;
-
-TRUE
-	:	'true'
-	;
-
-FALSE
-	:	'false'
-	;
-
-NOTEQUAL
-	:	'!='
-	;
-
-EQUAL
-	:	'=='
-	;
-
-NOT
-	:	'~'
-	;
-
-OR
-	:	'||'
-	;
-
-AND
-	:	'&&'
-	;
-
-PLUS
-	:	'+'
-	;
-
-MINUS
-	:	'-'
-	;
-
-STAR
-	:	'*'
-	;
-
-SLASH
-	:	'/'
-	;

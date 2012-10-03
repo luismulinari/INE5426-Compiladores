@@ -1,152 +1,105 @@
-// $ANTLR 3.3 Nov 30, 2010 12:45:30 /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g 2012-10-03 09:48:01
+// $ANTLR 3.4 C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g 2012-10-03 12:01:21
 
 import org.antlr.runtime.*;
 import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
 
-import org.antlr.runtime.debug.*;
-import java.io.IOException;
-public class gramaParser extends DebugParser {
+@SuppressWarnings({"all", "warnings", "unchecked"})
+public class gramaParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ID", "INT", "FLOAT", "CHAR", "STRING", "COMMENT", "ESC_SEQ", "HEX_DIGIT", "UNICODE_ESC", "OCTAL_ESC", "'main '", "'{'", "'}'", "';'", "'while'", "'('", "')'", "'if'", "'else'", "'int'", "'char'", "'string'", "'float'", "','", "'true'", "'false'", "'!='", "'=='", "'||'", "'&&'", "'~'", "'>'", "'<'", "'>='", "'<='", "'='", "'+'", "'-'", "'*'", "'/'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "AND", "CHAR", "COMMENT", "ELSE", "EQUAL", "ESC_SEQ", "FALSE", "FLOAT", "GREATER", "GREATEREQUAL", "HEX_DIGIT", "ID", "IF", "INT", "LCURLY", "LESS", "LESSEQUAL", "LPAREN", "MAIN", "MINUS", "NOT", "NOTEQUAL", "OCTAL_ESC", "OR", "PLUS", "RCURLY", "RPAREN", "SLASH", "STAR", "STRING", "TRUE", "T_CHAR", "T_FLOAT", "T_INT", "T_STRING", "UNICODE_ESC", "WHILE", "','", "';'", "'='"
     };
+
     public static final int EOF=-1;
-    public static final int T__14=14;
-    public static final int T__15=15;
-    public static final int T__16=16;
-    public static final int T__17=17;
-    public static final int T__18=18;
-    public static final int T__19=19;
-    public static final int T__20=20;
-    public static final int T__21=21;
-    public static final int T__22=22;
-    public static final int T__23=23;
-    public static final int T__24=24;
-    public static final int T__25=25;
-    public static final int T__26=26;
-    public static final int T__27=27;
-    public static final int T__28=28;
-    public static final int T__29=29;
-    public static final int T__30=30;
-    public static final int T__31=31;
-    public static final int T__32=32;
-    public static final int T__33=33;
-    public static final int T__34=34;
-    public static final int T__35=35;
-    public static final int T__36=36;
-    public static final int T__37=37;
-    public static final int T__38=38;
-    public static final int T__39=39;
-    public static final int T__40=40;
     public static final int T__41=41;
     public static final int T__42=42;
     public static final int T__43=43;
-    public static final int ID=4;
-    public static final int INT=5;
-    public static final int FLOAT=6;
-    public static final int CHAR=7;
-    public static final int STRING=8;
-    public static final int COMMENT=9;
-    public static final int ESC_SEQ=10;
-    public static final int HEX_DIGIT=11;
-    public static final int UNICODE_ESC=12;
-    public static final int OCTAL_ESC=13;
+    public static final int AND=4;
+    public static final int CHAR=5;
+    public static final int COMMENT=6;
+    public static final int ELSE=7;
+    public static final int EQUAL=8;
+    public static final int ESC_SEQ=9;
+    public static final int FALSE=10;
+    public static final int FLOAT=11;
+    public static final int GREATER=12;
+    public static final int GREATEREQUAL=13;
+    public static final int HEX_DIGIT=14;
+    public static final int ID=15;
+    public static final int IF=16;
+    public static final int INT=17;
+    public static final int LCURLY=18;
+    public static final int LESS=19;
+    public static final int LESSEQUAL=20;
+    public static final int LPAREN=21;
+    public static final int MAIN=22;
+    public static final int MINUS=23;
+    public static final int NOT=24;
+    public static final int NOTEQUAL=25;
+    public static final int OCTAL_ESC=26;
+    public static final int OR=27;
+    public static final int PLUS=28;
+    public static final int RCURLY=29;
+    public static final int RPAREN=30;
+    public static final int SLASH=31;
+    public static final int STAR=32;
+    public static final int STRING=33;
+    public static final int TRUE=34;
+    public static final int T_CHAR=35;
+    public static final int T_FLOAT=36;
+    public static final int T_INT=37;
+    public static final int T_STRING=38;
+    public static final int UNICODE_ESC=39;
+    public static final int WHILE=40;
 
     // delegates
+    public Parser[] getDelegates() {
+        return new Parser[] {};
+    }
+
     // delegators
 
-    public static final String[] ruleNames = new String[] {
-        "invalidRule", "expressao", "condicao", "funcao", "declaracaoSimbolo", 
-        "chamadaFuncao", "operacaoBooleana", "type", "definicao_while", 
-        "argumento", "operacaoAritmetica", "bloco", "atribuicaoVariavel", 
-        "grama", "definicao_if", "definicao_variavel"
-    };
-    public static final boolean[] decisionCanBacktrack = new boolean[] {
-        false, // invalid decision
-        false, false, false, false, false, false, false, false, false, false, 
-            false
-    };
 
-     
-        public int ruleLevel = 0;
-        public int getRuleLevel() { return ruleLevel; }
-        public void incRuleLevel() { ruleLevel++; }
-        public void decRuleLevel() { ruleLevel--; }
-        public gramaParser(TokenStream input) {
-            this(input, DebugEventSocketProxy.DEFAULT_DEBUGGER_PORT, new RecognizerSharedState());
-        }
-        public gramaParser(TokenStream input, int port, RecognizerSharedState state) {
-            super(input, state);
-            DebugEventSocketProxy proxy =
-                new DebugEventSocketProxy(this, port, null);
-            setDebugListener(proxy);
-            try {
-                proxy.handshake();
-            }
-            catch (IOException ioe) {
-                reportError(ioe);
-            }
-        }
-    public gramaParser(TokenStream input, DebugEventListener dbg) {
-        super(input, dbg, new RecognizerSharedState());
-
+    public gramaParser(TokenStream input) {
+        this(input, new RecognizerSharedState());
     }
-    protected boolean evalPredicate(boolean result, String predicate) {
-        dbg.semanticPredicate(result, predicate);
-        return result;
+    public gramaParser(TokenStream input, RecognizerSharedState state) {
+        super(input, state);
     }
-
 
     public String[] getTokenNames() { return gramaParser.tokenNames; }
-    public String getGrammarFileName() { return "/home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g"; }
+    public String getGrammarFileName() { return "C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g"; }
 
 
 
     // $ANTLR start "grama"
-    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:3:1: grama : 'main ' '{' ( bloco )* '}' ;
+    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:115:1: grama : MAIN LCURLY ( bloco )* RCURLY ;
     public final void grama() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "grama");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(3, 1);
-
         try {
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:4:2: ( 'main ' '{' ( bloco )* '}' )
-            dbg.enterAlt(1);
-
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:4:4: 'main ' '{' ( bloco )* '}'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:116:2: ( MAIN LCURLY ( bloco )* RCURLY )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:116:4: MAIN LCURLY ( bloco )* RCURLY
             {
-            dbg.location(4,4);
-            match(input,14,FOLLOW_14_in_grama11); 
-            dbg.location(4,12);
-            match(input,15,FOLLOW_15_in_grama13); 
-            dbg.location(4,16);
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:4:16: ( bloco )*
-            try { dbg.enterSubRule(1);
+            match(input,MAIN,FOLLOW_MAIN_in_grama313); 
 
+            match(input,LCURLY,FOLLOW_LCURLY_in_grama315); 
+
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:116:16: ( bloco )*
             loop1:
             do {
                 int alt1=2;
-                try { dbg.enterDecision(1, decisionCanBacktrack[1]);
-
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==ID||LA1_0==18||LA1_0==21||(LA1_0>=23 && LA1_0<=26)) ) {
+                if ( ((LA1_0 >= ID && LA1_0 <= IF)||(LA1_0 >= T_CHAR && LA1_0 <= T_STRING)||LA1_0==WHILE) ) {
                     alt1=1;
                 }
 
 
-                } finally {dbg.exitDecision(1);}
-
                 switch (alt1) {
             	case 1 :
-            	    dbg.enterAlt(1);
-
-            	    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:4:16: bloco
+            	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:116:16: bloco
             	    {
-            	    dbg.location(4,16);
-            	    pushFollow(FOLLOW_bloco_in_grama15);
+            	    pushFollow(FOLLOW_bloco_in_grama317);
             	    bloco();
 
             	    state._fsp--;
@@ -159,10 +112,9 @@ public class gramaParser extends DebugParser {
             	    break loop1;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(1);}
 
-            dbg.location(4,23);
-            match(input,16,FOLLOW_16_in_grama18); 
+
+            match(input,RCURLY,FOLLOW_RCURLY_in_grama320); 
 
             }
 
@@ -171,40 +123,27 @@ public class gramaParser extends DebugParser {
             reportError(re);
             recover(input,re);
         }
-        finally {
-        }
-        dbg.location(5, 2);
 
-        }
         finally {
-            dbg.exitRule(getGrammarFileName(), "grama");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        	// do for sure before leaving
         }
-
         return ;
     }
     // $ANTLR end "grama"
 
 
+
     // $ANTLR start "bloco"
-    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:7:1: bloco : ( definicao_variavel ';' | atribuicaoVariavel ';' | chamadaFuncao ';' | definicao_if | definicao_while );
+    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:119:1: bloco : ( definicao_variavel ';' | atribuicaoVariavel ';' | chamadaFuncao ';' | definicao_if | definicao_while );
     public final void bloco() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "bloco");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(7, 1);
-
         try {
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:8:2: ( definicao_variavel ';' | atribuicaoVariavel ';' | chamadaFuncao ';' | definicao_if | definicao_while )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:120:2: ( definicao_variavel ';' | atribuicaoVariavel ';' | chamadaFuncao ';' | definicao_if | definicao_while )
             int alt2=5;
-            try { dbg.enterDecision(2, decisionCanBacktrack[2]);
-
             switch ( input.LA(1) ) {
-            case 23:
-            case 24:
-            case 25:
-            case 26:
+            case T_CHAR:
+            case T_FLOAT:
+            case T_INT:
+            case T_STRING:
                 {
                 alt2=1;
                 }
@@ -213,27 +152,27 @@ public class gramaParser extends DebugParser {
                 {
                 int LA2_2 = input.LA(2);
 
-                if ( (LA2_2==39) ) {
+                if ( (LA2_2==43) ) {
                     alt2=2;
                 }
-                else if ( (LA2_2==19) ) {
+                else if ( (LA2_2==LPAREN) ) {
                     alt2=3;
                 }
                 else {
                     NoViableAltException nvae =
                         new NoViableAltException("", 2, 2, input);
 
-                    dbg.recognitionException(nvae);
                     throw nvae;
+
                 }
                 }
                 break;
-            case 21:
+            case IF:
                 {
                 alt2=4;
                 }
                 break;
-            case 18:
+            case WHILE:
                 {
                 alt2=5;
                 }
@@ -242,68 +181,54 @@ public class gramaParser extends DebugParser {
                 NoViableAltException nvae =
                     new NoViableAltException("", 2, 0, input);
 
-                dbg.recognitionException(nvae);
                 throw nvae;
-            }
 
-            } finally {dbg.exitDecision(2);}
+            }
 
             switch (alt2) {
                 case 1 :
-                    dbg.enterAlt(1);
-
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:8:4: definicao_variavel ';'
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:120:4: definicao_variavel ';'
                     {
-                    dbg.location(8,4);
-                    pushFollow(FOLLOW_definicao_variavel_in_bloco29);
+                    pushFollow(FOLLOW_definicao_variavel_in_bloco331);
                     definicao_variavel();
 
                     state._fsp--;
 
-                    dbg.location(8,23);
-                    match(input,17,FOLLOW_17_in_bloco31); 
+
+                    match(input,42,FOLLOW_42_in_bloco333); 
 
                     }
                     break;
                 case 2 :
-                    dbg.enterAlt(2);
-
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:9:4: atribuicaoVariavel ';'
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:121:4: atribuicaoVariavel ';'
                     {
-                    dbg.location(9,4);
-                    pushFollow(FOLLOW_atribuicaoVariavel_in_bloco36);
+                    pushFollow(FOLLOW_atribuicaoVariavel_in_bloco338);
                     atribuicaoVariavel();
 
                     state._fsp--;
 
-                    dbg.location(9,23);
-                    match(input,17,FOLLOW_17_in_bloco38); 
+
+                    match(input,42,FOLLOW_42_in_bloco340); 
 
                     }
                     break;
                 case 3 :
-                    dbg.enterAlt(3);
-
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:10:4: chamadaFuncao ';'
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:122:4: chamadaFuncao ';'
                     {
-                    dbg.location(10,4);
-                    pushFollow(FOLLOW_chamadaFuncao_in_bloco43);
+                    pushFollow(FOLLOW_chamadaFuncao_in_bloco345);
                     chamadaFuncao();
 
                     state._fsp--;
 
-                    dbg.location(10,18);
-                    match(input,17,FOLLOW_17_in_bloco45); 
+
+                    match(input,42,FOLLOW_42_in_bloco347); 
 
                     }
                     break;
                 case 4 :
-                    dbg.enterAlt(4);
-
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:11:4: definicao_if
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:123:4: definicao_if
                     {
-                    dbg.location(11,4);
-                    pushFollow(FOLLOW_definicao_if_in_bloco50);
+                    pushFollow(FOLLOW_definicao_if_in_bloco352);
                     definicao_if();
 
                     state._fsp--;
@@ -312,12 +237,9 @@ public class gramaParser extends DebugParser {
                     }
                     break;
                 case 5 :
-                    dbg.enterAlt(5);
-
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:12:4: definicao_while
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:124:4: definicao_while
                     {
-                    dbg.location(12,4);
-                    pushFollow(FOLLOW_definicao_while_in_bloco55);
+                    pushFollow(FOLLOW_definicao_while_in_bloco357);
                     definicao_while();
 
                     state._fsp--;
@@ -332,58 +254,44 @@ public class gramaParser extends DebugParser {
             reportError(re);
             recover(input,re);
         }
-        finally {
-        }
-        dbg.location(13, 2);
 
-        }
         finally {
-            dbg.exitRule(getGrammarFileName(), "bloco");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        	// do for sure before leaving
         }
-
         return ;
     }
     // $ANTLR end "bloco"
 
 
+
     // $ANTLR start "definicao_while"
-    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:15:1: definicao_while : 'while' '(' condicao ')' '{' bloco '}' ;
+    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:127:1: definicao_while : WHILE LPAREN condicao RPAREN LCURLY bloco RCURLY ;
     public final void definicao_while() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "definicao_while");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(15, 1);
-
         try {
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:16:2: ( 'while' '(' condicao ')' '{' bloco '}' )
-            dbg.enterAlt(1);
-
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:16:4: 'while' '(' condicao ')' '{' bloco '}'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:128:2: ( WHILE LPAREN condicao RPAREN LCURLY bloco RCURLY )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:128:4: WHILE LPAREN condicao RPAREN LCURLY bloco RCURLY
             {
-            dbg.location(16,4);
-            match(input,18,FOLLOW_18_in_definicao_while66); 
-            dbg.location(16,12);
-            match(input,19,FOLLOW_19_in_definicao_while68); 
-            dbg.location(16,16);
-            pushFollow(FOLLOW_condicao_in_definicao_while70);
+            match(input,WHILE,FOLLOW_WHILE_in_definicao_while368); 
+
+            match(input,LPAREN,FOLLOW_LPAREN_in_definicao_while370); 
+
+            pushFollow(FOLLOW_condicao_in_definicao_while372);
             condicao();
 
             state._fsp--;
 
-            dbg.location(16,25);
-            match(input,20,FOLLOW_20_in_definicao_while72); 
-            dbg.location(16,29);
-            match(input,15,FOLLOW_15_in_definicao_while74); 
-            dbg.location(16,33);
-            pushFollow(FOLLOW_bloco_in_definicao_while76);
+
+            match(input,RPAREN,FOLLOW_RPAREN_in_definicao_while374); 
+
+            match(input,LCURLY,FOLLOW_LCURLY_in_definicao_while376); 
+
+            pushFollow(FOLLOW_bloco_in_definicao_while378);
             bloco();
 
             state._fsp--;
 
-            dbg.location(16,39);
-            match(input,16,FOLLOW_16_in_definicao_while78); 
+
+            match(input,RCURLY,FOLLOW_RCURLY_in_definicao_while380); 
 
             }
 
@@ -392,95 +300,72 @@ public class gramaParser extends DebugParser {
             reportError(re);
             recover(input,re);
         }
-        finally {
-        }
-        dbg.location(17, 2);
 
-        }
         finally {
-            dbg.exitRule(getGrammarFileName(), "definicao_while");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        	// do for sure before leaving
         }
-
         return ;
     }
     // $ANTLR end "definicao_while"
 
 
+
     // $ANTLR start "definicao_if"
-    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:19:1: definicao_if : 'if' '(' condicao ')' '{' bloco '}' ( 'else' '{' bloco '}' )? ;
+    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:131:1: definicao_if : IF LPAREN condicao RPAREN LCURLY bloco RCURLY ( ELSE LCURLY bloco RCURLY )? ;
     public final void definicao_if() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "definicao_if");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(19, 1);
-
         try {
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:20:3: ( 'if' '(' condicao ')' '{' bloco '}' ( 'else' '{' bloco '}' )? )
-            dbg.enterAlt(1);
-
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:20:5: 'if' '(' condicao ')' '{' bloco '}' ( 'else' '{' bloco '}' )?
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:132:3: ( IF LPAREN condicao RPAREN LCURLY bloco RCURLY ( ELSE LCURLY bloco RCURLY )? )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:132:5: IF LPAREN condicao RPAREN LCURLY bloco RCURLY ( ELSE LCURLY bloco RCURLY )?
             {
-            dbg.location(20,5);
-            match(input,21,FOLLOW_21_in_definicao_if90); 
-            dbg.location(20,10);
-            match(input,19,FOLLOW_19_in_definicao_if92); 
-            dbg.location(20,14);
-            pushFollow(FOLLOW_condicao_in_definicao_if94);
+            match(input,IF,FOLLOW_IF_in_definicao_if392); 
+
+            match(input,LPAREN,FOLLOW_LPAREN_in_definicao_if394); 
+
+            pushFollow(FOLLOW_condicao_in_definicao_if396);
             condicao();
 
             state._fsp--;
 
-            dbg.location(20,23);
-            match(input,20,FOLLOW_20_in_definicao_if96); 
-            dbg.location(20,27);
-            match(input,15,FOLLOW_15_in_definicao_if98); 
-            dbg.location(20,31);
-            pushFollow(FOLLOW_bloco_in_definicao_if100);
+
+            match(input,RPAREN,FOLLOW_RPAREN_in_definicao_if398); 
+
+            match(input,LCURLY,FOLLOW_LCURLY_in_definicao_if400); 
+
+            pushFollow(FOLLOW_bloco_in_definicao_if402);
             bloco();
 
             state._fsp--;
 
-            dbg.location(20,37);
-            match(input,16,FOLLOW_16_in_definicao_if102); 
-            dbg.location(20,41);
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:20:41: ( 'else' '{' bloco '}' )?
-            int alt3=2;
-            try { dbg.enterSubRule(3);
-            try { dbg.enterDecision(3, decisionCanBacktrack[3]);
 
+            match(input,RCURLY,FOLLOW_RCURLY_in_definicao_if404); 
+
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:132:51: ( ELSE LCURLY bloco RCURLY )?
+            int alt3=2;
             int LA3_0 = input.LA(1);
 
-            if ( (LA3_0==22) ) {
+            if ( (LA3_0==ELSE) ) {
                 alt3=1;
             }
-            } finally {dbg.exitDecision(3);}
-
             switch (alt3) {
                 case 1 :
-                    dbg.enterAlt(1);
-
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:20:42: 'else' '{' bloco '}'
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:132:52: ELSE LCURLY bloco RCURLY
                     {
-                    dbg.location(20,42);
-                    match(input,22,FOLLOW_22_in_definicao_if105); 
-                    dbg.location(20,49);
-                    match(input,15,FOLLOW_15_in_definicao_if107); 
-                    dbg.location(20,53);
-                    pushFollow(FOLLOW_bloco_in_definicao_if109);
+                    match(input,ELSE,FOLLOW_ELSE_in_definicao_if407); 
+
+                    match(input,LCURLY,FOLLOW_LCURLY_in_definicao_if409); 
+
+                    pushFollow(FOLLOW_bloco_in_definicao_if411);
                     bloco();
 
                     state._fsp--;
 
-                    dbg.location(20,59);
-                    match(input,16,FOLLOW_16_in_definicao_if111); 
+
+                    match(input,RCURLY,FOLLOW_RCURLY_in_definicao_if413); 
 
                     }
                     break;
 
             }
-            } finally {dbg.exitSubRule(3);}
 
 
             }
@@ -490,44 +375,30 @@ public class gramaParser extends DebugParser {
             reportError(re);
             recover(input,re);
         }
-        finally {
-        }
-        dbg.location(21, 3);
 
-        }
         finally {
-            dbg.exitRule(getGrammarFileName(), "definicao_if");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        	// do for sure before leaving
         }
-
         return ;
     }
     // $ANTLR end "definicao_if"
 
 
+
     // $ANTLR start "definicao_variavel"
-    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:23:1: definicao_variavel : type ID ;
+    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:135:1: definicao_variavel : type ID ;
     public final void definicao_variavel() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "definicao_variavel");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(23, 1);
-
         try {
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:24:2: ( type ID )
-            dbg.enterAlt(1);
-
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:24:4: type ID
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:136:2: ( type ID )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:136:4: type ID
             {
-            dbg.location(24,4);
-            pushFollow(FOLLOW_type_in_definicao_variavel125);
+            pushFollow(FOLLOW_type_in_definicao_variavel427);
             type();
 
             state._fsp--;
 
-            dbg.location(24,9);
-            match(input,ID,FOLLOW_ID_in_definicao_variavel127); 
+
+            match(input,ID,FOLLOW_ID_in_definicao_variavel429); 
 
             }
 
@@ -536,44 +407,29 @@ public class gramaParser extends DebugParser {
             reportError(re);
             recover(input,re);
         }
-        finally {
-        }
-        dbg.location(25, 2);
 
-        }
         finally {
-            dbg.exitRule(getGrammarFileName(), "definicao_variavel");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        	// do for sure before leaving
         }
-
         return ;
     }
     // $ANTLR end "definicao_variavel"
 
 
+
     // $ANTLR start "type"
-    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:27:1: type : ( 'int' | 'char' | 'string' | 'float' );
+    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:139:1: type : ( T_INT | T_CHAR | T_STRING | T_FLOAT );
     public final void type() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "type");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(27, 1);
-
         try {
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:28:4: ( 'int' | 'char' | 'string' | 'float' )
-            dbg.enterAlt(1);
-
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:140:4: ( T_INT | T_CHAR | T_STRING | T_FLOAT )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:
             {
-            dbg.location(28,4);
-            if ( (input.LA(1)>=23 && input.LA(1)<=26) ) {
+            if ( (input.LA(1) >= T_CHAR && input.LA(1) <= T_STRING) ) {
                 input.consume();
                 state.errorRecovery=false;
             }
             else {
                 MismatchedSetException mse = new MismatchedSetException(null,input);
-                dbg.recognitionException(mse);
                 throw mse;
             }
 
@@ -585,84 +441,61 @@ public class gramaParser extends DebugParser {
             reportError(re);
             recover(input,re);
         }
-        finally {
-        }
-        dbg.location(32, 2);
 
-        }
         finally {
-            dbg.exitRule(getGrammarFileName(), "type");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        	// do for sure before leaving
         }
-
         return ;
     }
     // $ANTLR end "type"
 
 
+
     // $ANTLR start "funcao"
-    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:34:1: funcao : type declaracaoSimbolo '(' declaracaoSimbolo ( ',' declaracaoSimbolo )* ')' '{' bloco '}' ;
+    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:146:1: funcao : type declaracaoSimbolo LPAREN declaracaoSimbolo ( ',' declaracaoSimbolo )* RPAREN LCURLY bloco RCURLY ;
     public final void funcao() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "funcao");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(34, 1);
-
         try {
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:35:2: ( type declaracaoSimbolo '(' declaracaoSimbolo ( ',' declaracaoSimbolo )* ')' '{' bloco '}' )
-            dbg.enterAlt(1);
-
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:35:4: type declaracaoSimbolo '(' declaracaoSimbolo ( ',' declaracaoSimbolo )* ')' '{' bloco '}'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:147:2: ( type declaracaoSimbolo LPAREN declaracaoSimbolo ( ',' declaracaoSimbolo )* RPAREN LCURLY bloco RCURLY )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:147:4: type declaracaoSimbolo LPAREN declaracaoSimbolo ( ',' declaracaoSimbolo )* RPAREN LCURLY bloco RCURLY
             {
-            dbg.location(35,4);
-            pushFollow(FOLLOW_type_in_funcao166);
+            pushFollow(FOLLOW_type_in_funcao468);
             type();
 
             state._fsp--;
 
-            dbg.location(35,9);
-            pushFollow(FOLLOW_declaracaoSimbolo_in_funcao168);
+
+            pushFollow(FOLLOW_declaracaoSimbolo_in_funcao470);
             declaracaoSimbolo();
 
             state._fsp--;
 
-            dbg.location(35,27);
-            match(input,19,FOLLOW_19_in_funcao170); 
-            dbg.location(35,31);
-            pushFollow(FOLLOW_declaracaoSimbolo_in_funcao172);
+
+            match(input,LPAREN,FOLLOW_LPAREN_in_funcao472); 
+
+            pushFollow(FOLLOW_declaracaoSimbolo_in_funcao474);
             declaracaoSimbolo();
 
             state._fsp--;
 
-            dbg.location(35,49);
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:35:49: ( ',' declaracaoSimbolo )*
-            try { dbg.enterSubRule(4);
 
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:147:52: ( ',' declaracaoSimbolo )*
             loop4:
             do {
                 int alt4=2;
-                try { dbg.enterDecision(4, decisionCanBacktrack[4]);
-
                 int LA4_0 = input.LA(1);
 
-                if ( (LA4_0==27) ) {
+                if ( (LA4_0==41) ) {
                     alt4=1;
                 }
 
 
-                } finally {dbg.exitDecision(4);}
-
                 switch (alt4) {
             	case 1 :
-            	    dbg.enterAlt(1);
-
-            	    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:35:50: ',' declaracaoSimbolo
+            	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:147:53: ',' declaracaoSimbolo
             	    {
-            	    dbg.location(35,50);
-            	    match(input,27,FOLLOW_27_in_funcao175); 
-            	    dbg.location(35,54);
-            	    pushFollow(FOLLOW_declaracaoSimbolo_in_funcao177);
+            	    match(input,41,FOLLOW_41_in_funcao477); 
+
+            	    pushFollow(FOLLOW_declaracaoSimbolo_in_funcao479);
             	    declaracaoSimbolo();
 
             	    state._fsp--;
@@ -675,20 +508,19 @@ public class gramaParser extends DebugParser {
             	    break loop4;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(4);}
 
-            dbg.location(35,74);
-            match(input,20,FOLLOW_20_in_funcao181); 
-            dbg.location(35,78);
-            match(input,15,FOLLOW_15_in_funcao183); 
-            dbg.location(35,82);
-            pushFollow(FOLLOW_bloco_in_funcao185);
+
+            match(input,RPAREN,FOLLOW_RPAREN_in_funcao483); 
+
+            match(input,LCURLY,FOLLOW_LCURLY_in_funcao485); 
+
+            pushFollow(FOLLOW_bloco_in_funcao487);
             bloco();
 
             state._fsp--;
 
-            dbg.location(35,88);
-            match(input,16,FOLLOW_16_in_funcao187); 
+
+            match(input,RCURLY,FOLLOW_RCURLY_in_funcao489); 
 
             }
 
@@ -697,38 +529,24 @@ public class gramaParser extends DebugParser {
             reportError(re);
             recover(input,re);
         }
-        finally {
-        }
-        dbg.location(36, 2);
 
-        }
         finally {
-            dbg.exitRule(getGrammarFileName(), "funcao");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        	// do for sure before leaving
         }
-
         return ;
     }
     // $ANTLR end "funcao"
 
 
+
     // $ANTLR start "declaracaoSimbolo"
-    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:38:1: declaracaoSimbolo : ID ;
+    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:150:1: declaracaoSimbolo : ID ;
     public final void declaracaoSimbolo() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "declaracaoSimbolo");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(38, 1);
-
         try {
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:39:2: ( ID )
-            dbg.enterAlt(1);
-
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:39:4: ID
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:151:2: ( ID )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:151:4: ID
             {
-            dbg.location(39,4);
-            match(input,ID,FOLLOW_ID_in_declaracaoSimbolo198); 
+            match(input,ID,FOLLOW_ID_in_declaracaoSimbolo500); 
 
             }
 
@@ -737,55 +555,42 @@ public class gramaParser extends DebugParser {
             reportError(re);
             recover(input,re);
         }
-        finally {
-        }
-        dbg.location(40, 2);
 
-        }
         finally {
-            dbg.exitRule(getGrammarFileName(), "declaracaoSimbolo");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        	// do for sure before leaving
         }
-
         return ;
     }
     // $ANTLR end "declaracaoSimbolo"
 
 
+
     // $ANTLR start "condicao"
-    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:42:1: condicao : ( 'true' | 'false' | '(' ( argumento ) ( operacaoBooleana ) ( argumento ) ')' ( operacaoBooleana condicao )? | ( argumento ) ( operacaoBooleana ) ( argumento ) );
+    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:154:1: condicao : ( TRUE | FALSE | LPAREN ( argumento ) ( operacaoBooleana ) ( argumento ) RPAREN ( operacaoBooleana condicao )? | ( argumento ) ( operacaoBooleana ) ( argumento ) );
     public final void condicao() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "condicao");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(42, 1);
-
         try {
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:43:2: ( 'true' | 'false' | '(' ( argumento ) ( operacaoBooleana ) ( argumento ) ')' ( operacaoBooleana condicao )? | ( argumento ) ( operacaoBooleana ) ( argumento ) )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:155:2: ( TRUE | FALSE | LPAREN ( argumento ) ( operacaoBooleana ) ( argumento ) RPAREN ( operacaoBooleana condicao )? | ( argumento ) ( operacaoBooleana ) ( argumento ) )
             int alt6=4;
-            try { dbg.enterDecision(6, decisionCanBacktrack[6]);
-
             switch ( input.LA(1) ) {
-            case 28:
+            case TRUE:
                 {
                 alt6=1;
                 }
                 break;
-            case 29:
+            case FALSE:
                 {
                 alt6=2;
                 }
                 break;
-            case 19:
+            case LPAREN:
                 {
                 alt6=3;
                 }
                 break;
+            case CHAR:
+            case FLOAT:
             case ID:
             case INT:
-            case FLOAT:
-            case CHAR:
             case STRING:
                 {
                 alt6=4;
@@ -795,48 +600,34 @@ public class gramaParser extends DebugParser {
                 NoViableAltException nvae =
                     new NoViableAltException("", 6, 0, input);
 
-                dbg.recognitionException(nvae);
                 throw nvae;
-            }
 
-            } finally {dbg.exitDecision(6);}
+            }
 
             switch (alt6) {
                 case 1 :
-                    dbg.enterAlt(1);
-
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:43:4: 'true'
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:155:4: TRUE
                     {
-                    dbg.location(43,4);
-                    match(input,28,FOLLOW_28_in_condicao209); 
+                    match(input,TRUE,FOLLOW_TRUE_in_condicao511); 
 
                     }
                     break;
                 case 2 :
-                    dbg.enterAlt(2);
-
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:44:4: 'false'
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:156:4: FALSE
                     {
-                    dbg.location(44,4);
-                    match(input,29,FOLLOW_29_in_condicao214); 
+                    match(input,FALSE,FOLLOW_FALSE_in_condicao516); 
 
                     }
                     break;
                 case 3 :
-                    dbg.enterAlt(3);
-
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:45:4: '(' ( argumento ) ( operacaoBooleana ) ( argumento ) ')' ( operacaoBooleana condicao )?
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:157:4: LPAREN ( argumento ) ( operacaoBooleana ) ( argumento ) RPAREN ( operacaoBooleana condicao )?
                     {
-                    dbg.location(45,4);
-                    match(input,19,FOLLOW_19_in_condicao219); 
-                    dbg.location(45,8);
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:45:8: ( argumento )
-                    dbg.enterAlt(1);
+                    match(input,LPAREN,FOLLOW_LPAREN_in_condicao521); 
 
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:45:9: argumento
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:157:11: ( argumento )
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:157:12: argumento
                     {
-                    dbg.location(45,9);
-                    pushFollow(FOLLOW_argumento_in_condicao222);
+                    pushFollow(FOLLOW_argumento_in_condicao524);
                     argumento();
 
                     state._fsp--;
@@ -844,14 +635,11 @@ public class gramaParser extends DebugParser {
 
                     }
 
-                    dbg.location(45,20);
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:45:20: ( operacaoBooleana )
-                    dbg.enterAlt(1);
 
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:45:21: operacaoBooleana
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:157:23: ( operacaoBooleana )
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:157:24: operacaoBooleana
                     {
-                    dbg.location(45,21);
-                    pushFollow(FOLLOW_operacaoBooleana_in_condicao226);
+                    pushFollow(FOLLOW_operacaoBooleana_in_condicao528);
                     operacaoBooleana();
 
                     state._fsp--;
@@ -859,14 +647,11 @@ public class gramaParser extends DebugParser {
 
                     }
 
-                    dbg.location(45,39);
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:45:39: ( argumento )
-                    dbg.enterAlt(1);
 
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:45:40: argumento
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:157:42: ( argumento )
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:157:43: argumento
                     {
-                    dbg.location(45,40);
-                    pushFollow(FOLLOW_argumento_in_condicao230);
+                    pushFollow(FOLLOW_argumento_in_condicao532);
                     argumento();
 
                     state._fsp--;
@@ -874,35 +659,27 @@ public class gramaParser extends DebugParser {
 
                     }
 
-                    dbg.location(45,51);
-                    match(input,20,FOLLOW_20_in_condicao233); 
-                    dbg.location(45,55);
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:45:55: ( operacaoBooleana condicao )?
-                    int alt5=2;
-                    try { dbg.enterSubRule(5);
-                    try { dbg.enterDecision(5, decisionCanBacktrack[5]);
 
+                    match(input,RPAREN,FOLLOW_RPAREN_in_condicao535); 
+
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:157:61: ( operacaoBooleana condicao )?
+                    int alt5=2;
                     int LA5_0 = input.LA(1);
 
-                    if ( ((LA5_0>=30 && LA5_0<=38)) ) {
+                    if ( (LA5_0==AND||LA5_0==EQUAL||(LA5_0 >= GREATER && LA5_0 <= GREATEREQUAL)||(LA5_0 >= LESS && LA5_0 <= LESSEQUAL)||(LA5_0 >= NOT && LA5_0 <= NOTEQUAL)||LA5_0==OR) ) {
                         alt5=1;
                     }
-                    } finally {dbg.exitDecision(5);}
-
                     switch (alt5) {
                         case 1 :
-                            dbg.enterAlt(1);
-
-                            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:45:56: operacaoBooleana condicao
+                            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:157:62: operacaoBooleana condicao
                             {
-                            dbg.location(45,56);
-                            pushFollow(FOLLOW_operacaoBooleana_in_condicao236);
+                            pushFollow(FOLLOW_operacaoBooleana_in_condicao538);
                             operacaoBooleana();
 
                             state._fsp--;
 
-                            dbg.location(45,73);
-                            pushFollow(FOLLOW_condicao_in_condicao238);
+
+                            pushFollow(FOLLOW_condicao_in_condicao540);
                             condicao();
 
                             state._fsp--;
@@ -912,24 +689,17 @@ public class gramaParser extends DebugParser {
                             break;
 
                     }
-                    } finally {dbg.exitSubRule(5);}
 
 
                     }
                     break;
                 case 4 :
-                    dbg.enterAlt(4);
-
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:46:3: ( argumento ) ( operacaoBooleana ) ( argumento )
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:158:3: ( argumento ) ( operacaoBooleana ) ( argumento )
                     {
-                    dbg.location(46,3);
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:46:3: ( argumento )
-                    dbg.enterAlt(1);
-
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:46:4: argumento
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:158:3: ( argumento )
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:158:4: argumento
                     {
-                    dbg.location(46,4);
-                    pushFollow(FOLLOW_argumento_in_condicao245);
+                    pushFollow(FOLLOW_argumento_in_condicao547);
                     argumento();
 
                     state._fsp--;
@@ -937,14 +707,11 @@ public class gramaParser extends DebugParser {
 
                     }
 
-                    dbg.location(46,15);
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:46:15: ( operacaoBooleana )
-                    dbg.enterAlt(1);
 
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:46:16: operacaoBooleana
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:158:15: ( operacaoBooleana )
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:158:16: operacaoBooleana
                     {
-                    dbg.location(46,16);
-                    pushFollow(FOLLOW_operacaoBooleana_in_condicao249);
+                    pushFollow(FOLLOW_operacaoBooleana_in_condicao551);
                     operacaoBooleana();
 
                     state._fsp--;
@@ -952,14 +719,11 @@ public class gramaParser extends DebugParser {
 
                     }
 
-                    dbg.location(46,34);
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:46:34: ( argumento )
-                    dbg.enterAlt(1);
 
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:46:35: argumento
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:158:34: ( argumento )
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:158:35: argumento
                     {
-                    dbg.location(46,35);
-                    pushFollow(FOLLOW_argumento_in_condicao253);
+                    pushFollow(FOLLOW_argumento_in_condicao555);
                     argumento();
 
                     state._fsp--;
@@ -977,44 +741,29 @@ public class gramaParser extends DebugParser {
             reportError(re);
             recover(input,re);
         }
-        finally {
-        }
-        dbg.location(47, 2);
 
-        }
         finally {
-            dbg.exitRule(getGrammarFileName(), "condicao");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        	// do for sure before leaving
         }
-
         return ;
     }
     // $ANTLR end "condicao"
 
 
+
     // $ANTLR start "operacaoBooleana"
-    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:50:1: operacaoBooleana : ( '!=' | '==' | '||' | '&&' | '~' | '>' | '<' | '>=' | '<=' );
+    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:162:1: operacaoBooleana : ( NOTEQUAL | EQUAL | OR | AND | NOT | GREATER | LESS | GREATEREQUAL | LESSEQUAL );
     public final void operacaoBooleana() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "operacaoBooleana");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(50, 1);
-
         try {
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:51:2: ( '!=' | '==' | '||' | '&&' | '~' | '>' | '<' | '>=' | '<=' )
-            dbg.enterAlt(1);
-
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:163:2: ( NOTEQUAL | EQUAL | OR | AND | NOT | GREATER | LESS | GREATEREQUAL | LESSEQUAL )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:
             {
-            dbg.location(51,2);
-            if ( (input.LA(1)>=30 && input.LA(1)<=38) ) {
+            if ( input.LA(1)==AND||input.LA(1)==EQUAL||(input.LA(1) >= GREATER && input.LA(1) <= GREATEREQUAL)||(input.LA(1) >= LESS && input.LA(1) <= LESSEQUAL)||(input.LA(1) >= NOT && input.LA(1) <= NOTEQUAL)||input.LA(1)==OR ) {
                 input.consume();
                 state.errorRecovery=false;
             }
             else {
                 MismatchedSetException mse = new MismatchedSetException(null,input);
-                dbg.recognitionException(mse);
                 throw mse;
             }
 
@@ -1026,61 +775,39 @@ public class gramaParser extends DebugParser {
             reportError(re);
             recover(input,re);
         }
-        finally {
-        }
-        dbg.location(60, 2);
 
-        }
         finally {
-            dbg.exitRule(getGrammarFileName(), "operacaoBooleana");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        	// do for sure before leaving
         }
-
         return ;
     }
     // $ANTLR end "operacaoBooleana"
 
 
+
     // $ANTLR start "chamadaFuncao"
-    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:62:1: chamadaFuncao : ID '(' ( argumento )? ( ',' ( argumento ) )* ')' ;
+    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:174:1: chamadaFuncao : ID LPAREN ( argumento )? ( ',' ( argumento ) )* RPAREN ;
     public final void chamadaFuncao() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "chamadaFuncao");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(62, 1);
-
         try {
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:63:3: ( ID '(' ( argumento )? ( ',' ( argumento ) )* ')' )
-            dbg.enterAlt(1);
-
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:63:5: ID '(' ( argumento )? ( ',' ( argumento ) )* ')'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:175:3: ( ID LPAREN ( argumento )? ( ',' ( argumento ) )* RPAREN )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:175:5: ID LPAREN ( argumento )? ( ',' ( argumento ) )* RPAREN
             {
-            dbg.location(63,5);
-            match(input,ID,FOLLOW_ID_in_chamadaFuncao318); 
-            dbg.location(63,8);
-            match(input,19,FOLLOW_19_in_chamadaFuncao320); 
-            dbg.location(63,12);
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:63:12: ( argumento )?
-            int alt7=2;
-            try { dbg.enterSubRule(7);
-            try { dbg.enterDecision(7, decisionCanBacktrack[7]);
+            match(input,ID,FOLLOW_ID_in_chamadaFuncao620); 
 
+            match(input,LPAREN,FOLLOW_LPAREN_in_chamadaFuncao622); 
+
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:175:15: ( argumento )?
+            int alt7=2;
             int LA7_0 = input.LA(1);
 
-            if ( ((LA7_0>=ID && LA7_0<=STRING)) ) {
+            if ( (LA7_0==CHAR||LA7_0==FLOAT||LA7_0==ID||LA7_0==INT||LA7_0==STRING) ) {
                 alt7=1;
             }
-            } finally {dbg.exitDecision(7);}
-
             switch (alt7) {
                 case 1 :
-                    dbg.enterAlt(1);
-
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:63:13: argumento
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:175:16: argumento
                     {
-                    dbg.location(63,13);
-                    pushFollow(FOLLOW_argumento_in_chamadaFuncao323);
+                    pushFollow(FOLLOW_argumento_in_chamadaFuncao625);
                     argumento();
 
                     state._fsp--;
@@ -1090,42 +817,29 @@ public class gramaParser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(7);}
 
-            dbg.location(63,26);
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:63:26: ( ',' ( argumento ) )*
-            try { dbg.enterSubRule(8);
 
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:175:29: ( ',' ( argumento ) )*
             loop8:
             do {
                 int alt8=2;
-                try { dbg.enterDecision(8, decisionCanBacktrack[8]);
-
                 int LA8_0 = input.LA(1);
 
-                if ( (LA8_0==27) ) {
+                if ( (LA8_0==41) ) {
                     alt8=1;
                 }
 
 
-                } finally {dbg.exitDecision(8);}
-
                 switch (alt8) {
             	case 1 :
-            	    dbg.enterAlt(1);
-
-            	    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:63:27: ',' ( argumento )
+            	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:175:30: ',' ( argumento )
             	    {
-            	    dbg.location(63,27);
-            	    match(input,27,FOLLOW_27_in_chamadaFuncao329); 
-            	    dbg.location(63,31);
-            	    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:63:31: ( argumento )
-            	    dbg.enterAlt(1);
+            	    match(input,41,FOLLOW_41_in_chamadaFuncao631); 
 
-            	    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:63:32: argumento
+            	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:175:34: ( argumento )
+            	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:175:35: argumento
             	    {
-            	    dbg.location(63,32);
-            	    pushFollow(FOLLOW_argumento_in_chamadaFuncao332);
+            	    pushFollow(FOLLOW_argumento_in_chamadaFuncao634);
             	    argumento();
 
             	    state._fsp--;
@@ -1141,10 +855,9 @@ public class gramaParser extends DebugParser {
             	    break loop8;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(8);}
 
-            dbg.location(63,46);
-            match(input,20,FOLLOW_20_in_chamadaFuncao338); 
+
+            match(input,RPAREN,FOLLOW_RPAREN_in_chamadaFuncao640); 
 
             }
 
@@ -1153,42 +866,28 @@ public class gramaParser extends DebugParser {
             reportError(re);
             recover(input,re);
         }
-        finally {
-        }
-        dbg.location(64, 3);
 
-        }
         finally {
-            dbg.exitRule(getGrammarFileName(), "chamadaFuncao");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        	// do for sure before leaving
         }
-
         return ;
     }
     // $ANTLR end "chamadaFuncao"
 
 
+
     // $ANTLR start "atribuicaoVariavel"
-    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:66:1: atribuicaoVariavel : ID '=' expressao ;
+    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:178:1: atribuicaoVariavel : ID '=' expressao ;
     public final void atribuicaoVariavel() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "atribuicaoVariavel");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(66, 1);
-
         try {
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:67:3: ( ID '=' expressao )
-            dbg.enterAlt(1);
-
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:67:5: ID '=' expressao
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:179:3: ( ID '=' expressao )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:179:5: ID '=' expressao
             {
-            dbg.location(67,5);
-            match(input,ID,FOLLOW_ID_in_atribuicaoVariavel351); 
-            dbg.location(67,8);
-            match(input,39,FOLLOW_39_in_atribuicaoVariavel353); 
-            dbg.location(67,12);
-            pushFollow(FOLLOW_expressao_in_atribuicaoVariavel355);
+            match(input,ID,FOLLOW_ID_in_atribuicaoVariavel653); 
+
+            match(input,43,FOLLOW_43_in_atribuicaoVariavel655); 
+
+            pushFollow(FOLLOW_expressao_in_atribuicaoVariavel657);
             expressao();
 
             state._fsp--;
@@ -1201,52 +900,39 @@ public class gramaParser extends DebugParser {
             reportError(re);
             recover(input,re);
         }
-        finally {
-        }
-        dbg.location(68, 3);
 
-        }
         finally {
-            dbg.exitRule(getGrammarFileName(), "atribuicaoVariavel");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        	// do for sure before leaving
         }
-
         return ;
     }
     // $ANTLR end "atribuicaoVariavel"
 
 
+
     // $ANTLR start "expressao"
-    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:71:1: expressao : ( | argumento ( operacaoAritmetica expressao )? | '(' expressao ')' );
+    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:183:1: expressao : (| argumento ( operacaoAritmetica expressao )? | LPAREN expressao RPAREN );
     public final void expressao() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "expressao");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(71, 1);
-
         try {
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:72:2: ( | argumento ( operacaoAritmetica expressao )? | '(' expressao ')' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:184:2: (| argumento ( operacaoAritmetica expressao )? | LPAREN expressao RPAREN )
             int alt10=3;
-            try { dbg.enterDecision(10, decisionCanBacktrack[10]);
-
             switch ( input.LA(1) ) {
-            case 17:
-            case 20:
+            case RPAREN:
+            case 42:
                 {
                 alt10=1;
                 }
                 break;
+            case CHAR:
+            case FLOAT:
             case ID:
             case INT:
-            case FLOAT:
-            case CHAR:
             case STRING:
                 {
                 alt10=2;
                 }
                 break;
-            case 19:
+            case LPAREN:
                 {
                 alt10=3;
                 }
@@ -1255,58 +941,43 @@ public class gramaParser extends DebugParser {
                 NoViableAltException nvae =
                     new NoViableAltException("", 10, 0, input);
 
-                dbg.recognitionException(nvae);
                 throw nvae;
-            }
 
-            } finally {dbg.exitDecision(10);}
+            }
 
             switch (alt10) {
                 case 1 :
-                    dbg.enterAlt(1);
-
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:73:2: 
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:185:2: 
                     {
                     }
                     break;
                 case 2 :
-                    dbg.enterAlt(2);
-
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:73:4: argumento ( operacaoAritmetica expressao )?
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:185:4: argumento ( operacaoAritmetica expressao )?
                     {
-                    dbg.location(73,4);
-                    pushFollow(FOLLOW_argumento_in_expressao371);
+                    pushFollow(FOLLOW_argumento_in_expressao673);
                     argumento();
 
                     state._fsp--;
 
-                    dbg.location(73,14);
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:73:14: ( operacaoAritmetica expressao )?
-                    int alt9=2;
-                    try { dbg.enterSubRule(9);
-                    try { dbg.enterDecision(9, decisionCanBacktrack[9]);
 
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:185:14: ( operacaoAritmetica expressao )?
+                    int alt9=2;
                     int LA9_0 = input.LA(1);
 
-                    if ( ((LA9_0>=40 && LA9_0<=43)) ) {
+                    if ( (LA9_0==MINUS||LA9_0==PLUS||(LA9_0 >= SLASH && LA9_0 <= STAR)) ) {
                         alt9=1;
                     }
-                    } finally {dbg.exitDecision(9);}
-
                     switch (alt9) {
                         case 1 :
-                            dbg.enterAlt(1);
-
-                            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:73:15: operacaoAritmetica expressao
+                            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:185:15: operacaoAritmetica expressao
                             {
-                            dbg.location(73,15);
-                            pushFollow(FOLLOW_operacaoAritmetica_in_expressao374);
+                            pushFollow(FOLLOW_operacaoAritmetica_in_expressao676);
                             operacaoAritmetica();
 
                             state._fsp--;
 
-                            dbg.location(73,34);
-                            pushFollow(FOLLOW_expressao_in_expressao376);
+
+                            pushFollow(FOLLOW_expressao_in_expressao678);
                             expressao();
 
                             state._fsp--;
@@ -1316,26 +987,22 @@ public class gramaParser extends DebugParser {
                             break;
 
                     }
-                    } finally {dbg.exitSubRule(9);}
 
 
                     }
                     break;
                 case 3 :
-                    dbg.enterAlt(3);
-
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:74:4: '(' expressao ')'
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:186:4: LPAREN expressao RPAREN
                     {
-                    dbg.location(74,4);
-                    match(input,19,FOLLOW_19_in_expressao383); 
-                    dbg.location(74,8);
-                    pushFollow(FOLLOW_expressao_in_expressao385);
+                    match(input,LPAREN,FOLLOW_LPAREN_in_expressao685); 
+
+                    pushFollow(FOLLOW_expressao_in_expressao687);
                     expressao();
 
                     state._fsp--;
 
-                    dbg.location(74,18);
-                    match(input,20,FOLLOW_20_in_expressao387); 
+
+                    match(input,RPAREN,FOLLOW_RPAREN_in_expressao689); 
 
                     }
                     break;
@@ -1346,52 +1013,39 @@ public class gramaParser extends DebugParser {
             reportError(re);
             recover(input,re);
         }
-        finally {
-        }
-        dbg.location(75, 2);
 
-        }
         finally {
-            dbg.exitRule(getGrammarFileName(), "expressao");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        	// do for sure before leaving
         }
-
         return ;
     }
     // $ANTLR end "expressao"
 
 
+
     // $ANTLR start "argumento"
-    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:77:1: argumento : ( ID | INT | FLOAT | CHAR | STRING | chamadaFuncao );
+    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:189:1: argumento : ( ID | INT | FLOAT | CHAR | STRING | chamadaFuncao );
     public final void argumento() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "argumento");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(77, 1);
-
         try {
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:78:2: ( ID | INT | FLOAT | CHAR | STRING | chamadaFuncao )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:190:2: ( ID | INT | FLOAT | CHAR | STRING | chamadaFuncao )
             int alt11=6;
-            try { dbg.enterDecision(11, decisionCanBacktrack[11]);
-
             switch ( input.LA(1) ) {
             case ID:
                 {
                 int LA11_1 = input.LA(2);
 
-                if ( (LA11_1==19) ) {
+                if ( (LA11_1==LPAREN) ) {
                     alt11=6;
                 }
-                else if ( (LA11_1==17||LA11_1==20||LA11_1==27||(LA11_1>=30 && LA11_1<=38)||(LA11_1>=40 && LA11_1<=43)) ) {
+                else if ( (LA11_1==AND||LA11_1==EQUAL||(LA11_1 >= GREATER && LA11_1 <= GREATEREQUAL)||(LA11_1 >= LESS && LA11_1 <= LESSEQUAL)||(LA11_1 >= MINUS && LA11_1 <= NOTEQUAL)||(LA11_1 >= OR && LA11_1 <= PLUS)||(LA11_1 >= RPAREN && LA11_1 <= STAR)||(LA11_1 >= 41 && LA11_1 <= 42)) ) {
                     alt11=1;
                 }
                 else {
                     NoViableAltException nvae =
                         new NoViableAltException("", 11, 1, input);
 
-                    dbg.recognitionException(nvae);
                     throw nvae;
+
                 }
                 }
                 break;
@@ -1419,70 +1073,50 @@ public class gramaParser extends DebugParser {
                 NoViableAltException nvae =
                     new NoViableAltException("", 11, 0, input);
 
-                dbg.recognitionException(nvae);
                 throw nvae;
-            }
 
-            } finally {dbg.exitDecision(11);}
+            }
 
             switch (alt11) {
                 case 1 :
-                    dbg.enterAlt(1);
-
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:78:4: ID
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:190:4: ID
                     {
-                    dbg.location(78,4);
-                    match(input,ID,FOLLOW_ID_in_argumento399); 
+                    match(input,ID,FOLLOW_ID_in_argumento701); 
 
                     }
                     break;
                 case 2 :
-                    dbg.enterAlt(2);
-
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:79:4: INT
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:191:4: INT
                     {
-                    dbg.location(79,4);
-                    match(input,INT,FOLLOW_INT_in_argumento404); 
+                    match(input,INT,FOLLOW_INT_in_argumento706); 
 
                     }
                     break;
                 case 3 :
-                    dbg.enterAlt(3);
-
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:80:4: FLOAT
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:192:4: FLOAT
                     {
-                    dbg.location(80,4);
-                    match(input,FLOAT,FOLLOW_FLOAT_in_argumento409); 
+                    match(input,FLOAT,FOLLOW_FLOAT_in_argumento711); 
 
                     }
                     break;
                 case 4 :
-                    dbg.enterAlt(4);
-
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:81:4: CHAR
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:193:4: CHAR
                     {
-                    dbg.location(81,4);
-                    match(input,CHAR,FOLLOW_CHAR_in_argumento414); 
+                    match(input,CHAR,FOLLOW_CHAR_in_argumento716); 
 
                     }
                     break;
                 case 5 :
-                    dbg.enterAlt(5);
-
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:82:4: STRING
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:194:4: STRING
                     {
-                    dbg.location(82,4);
-                    match(input,STRING,FOLLOW_STRING_in_argumento419); 
+                    match(input,STRING,FOLLOW_STRING_in_argumento721); 
 
                     }
                     break;
                 case 6 :
-                    dbg.enterAlt(6);
-
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:83:4: chamadaFuncao
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:195:4: chamadaFuncao
                     {
-                    dbg.location(83,4);
-                    pushFollow(FOLLOW_chamadaFuncao_in_argumento424);
+                    pushFollow(FOLLOW_chamadaFuncao_in_argumento726);
                     chamadaFuncao();
 
                     state._fsp--;
@@ -1497,44 +1131,29 @@ public class gramaParser extends DebugParser {
             reportError(re);
             recover(input,re);
         }
-        finally {
-        }
-        dbg.location(84, 2);
 
-        }
         finally {
-            dbg.exitRule(getGrammarFileName(), "argumento");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        	// do for sure before leaving
         }
-
         return ;
     }
     // $ANTLR end "argumento"
 
 
+
     // $ANTLR start "operacaoAritmetica"
-    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:86:1: operacaoAritmetica : ( '+' | '-' | '*' | '/' );
+    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:198:1: operacaoAritmetica : ( PLUS | MINUS | STAR | SLASH );
     public final void operacaoAritmetica() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "operacaoAritmetica");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(86, 1);
-
         try {
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:87:2: ( '+' | '-' | '*' | '/' )
-            dbg.enterAlt(1);
-
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:199:2: ( PLUS | MINUS | STAR | SLASH )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:
             {
-            dbg.location(87,2);
-            if ( (input.LA(1)>=40 && input.LA(1)<=43) ) {
+            if ( input.LA(1)==MINUS||input.LA(1)==PLUS||(input.LA(1) >= SLASH && input.LA(1) <= STAR) ) {
                 input.consume();
                 state.errorRecovery=false;
             }
             else {
                 MismatchedSetException mse = new MismatchedSetException(null,input);
-                dbg.recognitionException(mse);
                 throw mse;
             }
 
@@ -1546,17 +1165,10 @@ public class gramaParser extends DebugParser {
             reportError(re);
             recover(input,re);
         }
-        finally {
-        }
-        dbg.location(91, 2);
 
-        }
         finally {
-            dbg.exitRule(getGrammarFileName(), "operacaoAritmetica");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        	// do for sure before leaving
         }
-
         return ;
     }
     // $ANTLR end "operacaoAritmetica"
@@ -1566,84 +1178,81 @@ public class gramaParser extends DebugParser {
 
  
 
-    public static final BitSet FOLLOW_14_in_grama11 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_grama13 = new BitSet(new long[]{0x0000000007A50010L});
-    public static final BitSet FOLLOW_bloco_in_grama15 = new BitSet(new long[]{0x0000000007A50010L});
-    public static final BitSet FOLLOW_16_in_grama18 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_definicao_variavel_in_bloco29 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_bloco31 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_atribuicaoVariavel_in_bloco36 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_bloco38 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_chamadaFuncao_in_bloco43 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_bloco45 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_definicao_if_in_bloco50 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_definicao_while_in_bloco55 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_definicao_while66 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_definicao_while68 = new BitSet(new long[]{0x00000000300801F0L});
-    public static final BitSet FOLLOW_condicao_in_definicao_while70 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_definicao_while72 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_definicao_while74 = new BitSet(new long[]{0x0000000007A40010L});
-    public static final BitSet FOLLOW_bloco_in_definicao_while76 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_definicao_while78 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_definicao_if90 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_definicao_if92 = new BitSet(new long[]{0x00000000300801F0L});
-    public static final BitSet FOLLOW_condicao_in_definicao_if94 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_definicao_if96 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_definicao_if98 = new BitSet(new long[]{0x0000000007A40010L});
-    public static final BitSet FOLLOW_bloco_in_definicao_if100 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_definicao_if102 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_22_in_definicao_if105 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_definicao_if107 = new BitSet(new long[]{0x0000000007A40010L});
-    public static final BitSet FOLLOW_bloco_in_definicao_if109 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_definicao_if111 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_type_in_definicao_variavel125 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ID_in_definicao_variavel127 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_set_in_type0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_type_in_funcao166 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_declaracaoSimbolo_in_funcao168 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_funcao170 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_declaracaoSimbolo_in_funcao172 = new BitSet(new long[]{0x0000000008100000L});
-    public static final BitSet FOLLOW_27_in_funcao175 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_declaracaoSimbolo_in_funcao177 = new BitSet(new long[]{0x0000000008100000L});
-    public static final BitSet FOLLOW_20_in_funcao181 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_funcao183 = new BitSet(new long[]{0x0000000007A40010L});
-    public static final BitSet FOLLOW_bloco_in_funcao185 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_funcao187 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_declaracaoSimbolo198 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_condicao209 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_condicao214 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_condicao219 = new BitSet(new long[]{0x00000000300801F0L});
-    public static final BitSet FOLLOW_argumento_in_condicao222 = new BitSet(new long[]{0x0000007FC0000000L});
-    public static final BitSet FOLLOW_operacaoBooleana_in_condicao226 = new BitSet(new long[]{0x00000000300801F0L});
-    public static final BitSet FOLLOW_argumento_in_condicao230 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_condicao233 = new BitSet(new long[]{0x0000007FC0000002L});
-    public static final BitSet FOLLOW_operacaoBooleana_in_condicao236 = new BitSet(new long[]{0x00000000300801F0L});
-    public static final BitSet FOLLOW_condicao_in_condicao238 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_argumento_in_condicao245 = new BitSet(new long[]{0x0000007FC0000000L});
-    public static final BitSet FOLLOW_operacaoBooleana_in_condicao249 = new BitSet(new long[]{0x00000000300801F0L});
-    public static final BitSet FOLLOW_argumento_in_condicao253 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_set_in_operacaoBooleana0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_chamadaFuncao318 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_chamadaFuncao320 = new BitSet(new long[]{0x00000000381801F0L});
-    public static final BitSet FOLLOW_argumento_in_chamadaFuncao323 = new BitSet(new long[]{0x0000000008100000L});
-    public static final BitSet FOLLOW_27_in_chamadaFuncao329 = new BitSet(new long[]{0x00000000300801F0L});
-    public static final BitSet FOLLOW_argumento_in_chamadaFuncao332 = new BitSet(new long[]{0x0000000008100000L});
-    public static final BitSet FOLLOW_20_in_chamadaFuncao338 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_atribuicaoVariavel351 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_atribuicaoVariavel353 = new BitSet(new long[]{0x00000000300801F0L});
-    public static final BitSet FOLLOW_expressao_in_atribuicaoVariavel355 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_argumento_in_expressao371 = new BitSet(new long[]{0x00000F0000000002L});
-    public static final BitSet FOLLOW_operacaoAritmetica_in_expressao374 = new BitSet(new long[]{0x00000000300801F0L});
-    public static final BitSet FOLLOW_expressao_in_expressao376 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_expressao383 = new BitSet(new long[]{0x00000000301801F0L});
-    public static final BitSet FOLLOW_expressao_in_expressao385 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_expressao387 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_argumento399 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_INT_in_argumento404 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FLOAT_in_argumento409 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHAR_in_argumento414 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_in_argumento419 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_chamadaFuncao_in_argumento424 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_set_in_operacaoAritmetica0 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_MAIN_in_grama313 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_LCURLY_in_grama315 = new BitSet(new long[]{0x0000017820018000L});
+    public static final BitSet FOLLOW_bloco_in_grama317 = new BitSet(new long[]{0x0000017820018000L});
+    public static final BitSet FOLLOW_RCURLY_in_grama320 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_definicao_variavel_in_bloco331 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_42_in_bloco333 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_atribuicaoVariavel_in_bloco338 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_42_in_bloco340 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_chamadaFuncao_in_bloco345 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_42_in_bloco347 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_definicao_if_in_bloco352 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_definicao_while_in_bloco357 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_WHILE_in_definicao_while368 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_LPAREN_in_definicao_while370 = new BitSet(new long[]{0x0000000600228C20L});
+    public static final BitSet FOLLOW_condicao_in_definicao_while372 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_RPAREN_in_definicao_while374 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_LCURLY_in_definicao_while376 = new BitSet(new long[]{0x0000017800018000L});
+    public static final BitSet FOLLOW_bloco_in_definicao_while378 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_RCURLY_in_definicao_while380 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IF_in_definicao_if392 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_LPAREN_in_definicao_if394 = new BitSet(new long[]{0x0000000600228C20L});
+    public static final BitSet FOLLOW_condicao_in_definicao_if396 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_RPAREN_in_definicao_if398 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_LCURLY_in_definicao_if400 = new BitSet(new long[]{0x0000017800018000L});
+    public static final BitSet FOLLOW_bloco_in_definicao_if402 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_RCURLY_in_definicao_if404 = new BitSet(new long[]{0x0000000000000082L});
+    public static final BitSet FOLLOW_ELSE_in_definicao_if407 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_LCURLY_in_definicao_if409 = new BitSet(new long[]{0x0000017800018000L});
+    public static final BitSet FOLLOW_bloco_in_definicao_if411 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_RCURLY_in_definicao_if413 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_type_in_definicao_variavel427 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_ID_in_definicao_variavel429 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_type_in_funcao468 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_declaracaoSimbolo_in_funcao470 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_LPAREN_in_funcao472 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_declaracaoSimbolo_in_funcao474 = new BitSet(new long[]{0x0000020040000000L});
+    public static final BitSet FOLLOW_41_in_funcao477 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_declaracaoSimbolo_in_funcao479 = new BitSet(new long[]{0x0000020040000000L});
+    public static final BitSet FOLLOW_RPAREN_in_funcao483 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_LCURLY_in_funcao485 = new BitSet(new long[]{0x0000017800018000L});
+    public static final BitSet FOLLOW_bloco_in_funcao487 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_RCURLY_in_funcao489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_declaracaoSimbolo500 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TRUE_in_condicao511 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FALSE_in_condicao516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LPAREN_in_condicao521 = new BitSet(new long[]{0x0000000200028820L});
+    public static final BitSet FOLLOW_argumento_in_condicao524 = new BitSet(new long[]{0x000000000B183110L});
+    public static final BitSet FOLLOW_operacaoBooleana_in_condicao528 = new BitSet(new long[]{0x0000000200028820L});
+    public static final BitSet FOLLOW_argumento_in_condicao532 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_RPAREN_in_condicao535 = new BitSet(new long[]{0x000000000B183112L});
+    public static final BitSet FOLLOW_operacaoBooleana_in_condicao538 = new BitSet(new long[]{0x0000000600228C20L});
+    public static final BitSet FOLLOW_condicao_in_condicao540 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_argumento_in_condicao547 = new BitSet(new long[]{0x000000000B183110L});
+    public static final BitSet FOLLOW_operacaoBooleana_in_condicao551 = new BitSet(new long[]{0x0000000200028820L});
+    public static final BitSet FOLLOW_argumento_in_condicao555 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_chamadaFuncao620 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_LPAREN_in_chamadaFuncao622 = new BitSet(new long[]{0x0000020240028820L});
+    public static final BitSet FOLLOW_argumento_in_chamadaFuncao625 = new BitSet(new long[]{0x0000020040000000L});
+    public static final BitSet FOLLOW_41_in_chamadaFuncao631 = new BitSet(new long[]{0x0000000200028820L});
+    public static final BitSet FOLLOW_argumento_in_chamadaFuncao634 = new BitSet(new long[]{0x0000020040000000L});
+    public static final BitSet FOLLOW_RPAREN_in_chamadaFuncao640 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_atribuicaoVariavel653 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_43_in_atribuicaoVariavel655 = new BitSet(new long[]{0x0000000200228820L});
+    public static final BitSet FOLLOW_expressao_in_atribuicaoVariavel657 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_argumento_in_expressao673 = new BitSet(new long[]{0x0000000190800002L});
+    public static final BitSet FOLLOW_operacaoAritmetica_in_expressao676 = new BitSet(new long[]{0x0000000200228820L});
+    public static final BitSet FOLLOW_expressao_in_expressao678 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LPAREN_in_expressao685 = new BitSet(new long[]{0x0000000240228820L});
+    public static final BitSet FOLLOW_expressao_in_expressao687 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_RPAREN_in_expressao689 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_argumento701 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_INT_in_argumento706 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FLOAT_in_argumento711 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHAR_in_argumento716 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_in_argumento721 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_chamadaFuncao_in_argumento726 = new BitSet(new long[]{0x0000000000000002L});
 
 }

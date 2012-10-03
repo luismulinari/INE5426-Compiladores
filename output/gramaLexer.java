@@ -1,341 +1,76 @@
-// $ANTLR 3.3 Nov 30, 2010 12:45:30 /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g 2012-10-03 09:48:01
+// $ANTLR 3.4 C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g 2012-10-03 12:01:21
 
 import org.antlr.runtime.*;
 import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
 
+@SuppressWarnings({"all", "warnings", "unchecked"})
 public class gramaLexer extends Lexer {
     public static final int EOF=-1;
-    public static final int T__14=14;
-    public static final int T__15=15;
-    public static final int T__16=16;
-    public static final int T__17=17;
-    public static final int T__18=18;
-    public static final int T__19=19;
-    public static final int T__20=20;
-    public static final int T__21=21;
-    public static final int T__22=22;
-    public static final int T__23=23;
-    public static final int T__24=24;
-    public static final int T__25=25;
-    public static final int T__26=26;
-    public static final int T__27=27;
-    public static final int T__28=28;
-    public static final int T__29=29;
-    public static final int T__30=30;
-    public static final int T__31=31;
-    public static final int T__32=32;
-    public static final int T__33=33;
-    public static final int T__34=34;
-    public static final int T__35=35;
-    public static final int T__36=36;
-    public static final int T__37=37;
-    public static final int T__38=38;
-    public static final int T__39=39;
-    public static final int T__40=40;
     public static final int T__41=41;
     public static final int T__42=42;
     public static final int T__43=43;
-    public static final int ID=4;
-    public static final int INT=5;
-    public static final int FLOAT=6;
-    public static final int CHAR=7;
-    public static final int STRING=8;
-    public static final int COMMENT=9;
-    public static final int ESC_SEQ=10;
-    public static final int HEX_DIGIT=11;
-    public static final int UNICODE_ESC=12;
-    public static final int OCTAL_ESC=13;
+    public static final int AND=4;
+    public static final int CHAR=5;
+    public static final int COMMENT=6;
+    public static final int ELSE=7;
+    public static final int EQUAL=8;
+    public static final int ESC_SEQ=9;
+    public static final int FALSE=10;
+    public static final int FLOAT=11;
+    public static final int GREATER=12;
+    public static final int GREATEREQUAL=13;
+    public static final int HEX_DIGIT=14;
+    public static final int ID=15;
+    public static final int IF=16;
+    public static final int INT=17;
+    public static final int LCURLY=18;
+    public static final int LESS=19;
+    public static final int LESSEQUAL=20;
+    public static final int LPAREN=21;
+    public static final int MAIN=22;
+    public static final int MINUS=23;
+    public static final int NOT=24;
+    public static final int NOTEQUAL=25;
+    public static final int OCTAL_ESC=26;
+    public static final int OR=27;
+    public static final int PLUS=28;
+    public static final int RCURLY=29;
+    public static final int RPAREN=30;
+    public static final int SLASH=31;
+    public static final int STAR=32;
+    public static final int STRING=33;
+    public static final int TRUE=34;
+    public static final int T_CHAR=35;
+    public static final int T_FLOAT=36;
+    public static final int T_INT=37;
+    public static final int T_STRING=38;
+    public static final int UNICODE_ESC=39;
+    public static final int WHILE=40;
 
     // delegates
     // delegators
+    public Lexer[] getDelegates() {
+        return new Lexer[] {};
+    }
 
-    public gramaLexer() {;} 
+    public gramaLexer() {} 
     public gramaLexer(CharStream input) {
         this(input, new RecognizerSharedState());
     }
     public gramaLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
-
     }
-    public String getGrammarFileName() { return "/home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g"; }
+    public String getGrammarFileName() { return "C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g"; }
 
-    // $ANTLR start "T__14"
-    public final void mT__14() throws RecognitionException {
+    // $ANTLR start "T__41"
+    public final void mT__41() throws RecognitionException {
         try {
-            int _type = T__14;
+            int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:3:7: ( 'main ' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:3:9: 'main '
-            {
-            match("main "); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__14"
-
-    // $ANTLR start "T__15"
-    public final void mT__15() throws RecognitionException {
-        try {
-            int _type = T__15;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:4:7: ( '{' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:4:9: '{'
-            {
-            match('{'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__15"
-
-    // $ANTLR start "T__16"
-    public final void mT__16() throws RecognitionException {
-        try {
-            int _type = T__16;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:5:7: ( '}' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:5:9: '}'
-            {
-            match('}'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__16"
-
-    // $ANTLR start "T__17"
-    public final void mT__17() throws RecognitionException {
-        try {
-            int _type = T__17;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:6:7: ( ';' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:6:9: ';'
-            {
-            match(';'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__17"
-
-    // $ANTLR start "T__18"
-    public final void mT__18() throws RecognitionException {
-        try {
-            int _type = T__18;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:7:7: ( 'while' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:7:9: 'while'
-            {
-            match("while"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__18"
-
-    // $ANTLR start "T__19"
-    public final void mT__19() throws RecognitionException {
-        try {
-            int _type = T__19;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:8:7: ( '(' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:8:9: '('
-            {
-            match('('); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__19"
-
-    // $ANTLR start "T__20"
-    public final void mT__20() throws RecognitionException {
-        try {
-            int _type = T__20;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:9:7: ( ')' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:9:9: ')'
-            {
-            match(')'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__20"
-
-    // $ANTLR start "T__21"
-    public final void mT__21() throws RecognitionException {
-        try {
-            int _type = T__21;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:10:7: ( 'if' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:10:9: 'if'
-            {
-            match("if"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__21"
-
-    // $ANTLR start "T__22"
-    public final void mT__22() throws RecognitionException {
-        try {
-            int _type = T__22;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:11:7: ( 'else' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:11:9: 'else'
-            {
-            match("else"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__22"
-
-    // $ANTLR start "T__23"
-    public final void mT__23() throws RecognitionException {
-        try {
-            int _type = T__23;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:12:7: ( 'int' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:12:9: 'int'
-            {
-            match("int"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__23"
-
-    // $ANTLR start "T__24"
-    public final void mT__24() throws RecognitionException {
-        try {
-            int _type = T__24;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:13:7: ( 'char' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:13:9: 'char'
-            {
-            match("char"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__24"
-
-    // $ANTLR start "T__25"
-    public final void mT__25() throws RecognitionException {
-        try {
-            int _type = T__25;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:14:7: ( 'string' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:14:9: 'string'
-            {
-            match("string"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__25"
-
-    // $ANTLR start "T__26"
-    public final void mT__26() throws RecognitionException {
-        try {
-            int _type = T__26;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:15:7: ( 'float' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:15:9: 'float'
-            {
-            match("float"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__26"
-
-    // $ANTLR start "T__27"
-    public final void mT__27() throws RecognitionException {
-        try {
-            int _type = T__27;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:16:7: ( ',' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:16:9: ','
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:2:7: ( ',' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:2:9: ','
             {
             match(','); 
 
@@ -345,294 +80,7 @@ public class gramaLexer extends Lexer {
             state.channel = _channel;
         }
         finally {
-        }
-    }
-    // $ANTLR end "T__27"
-
-    // $ANTLR start "T__28"
-    public final void mT__28() throws RecognitionException {
-        try {
-            int _type = T__28;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:17:7: ( 'true' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:17:9: 'true'
-            {
-            match("true"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__28"
-
-    // $ANTLR start "T__29"
-    public final void mT__29() throws RecognitionException {
-        try {
-            int _type = T__29;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:18:7: ( 'false' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:18:9: 'false'
-            {
-            match("false"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__29"
-
-    // $ANTLR start "T__30"
-    public final void mT__30() throws RecognitionException {
-        try {
-            int _type = T__30;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:19:7: ( '!=' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:19:9: '!='
-            {
-            match("!="); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__30"
-
-    // $ANTLR start "T__31"
-    public final void mT__31() throws RecognitionException {
-        try {
-            int _type = T__31;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:20:7: ( '==' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:20:9: '=='
-            {
-            match("=="); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__31"
-
-    // $ANTLR start "T__32"
-    public final void mT__32() throws RecognitionException {
-        try {
-            int _type = T__32;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:21:7: ( '||' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:21:9: '||'
-            {
-            match("||"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__32"
-
-    // $ANTLR start "T__33"
-    public final void mT__33() throws RecognitionException {
-        try {
-            int _type = T__33;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:22:7: ( '&&' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:22:9: '&&'
-            {
-            match("&&"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__33"
-
-    // $ANTLR start "T__34"
-    public final void mT__34() throws RecognitionException {
-        try {
-            int _type = T__34;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:23:7: ( '~' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:23:9: '~'
-            {
-            match('~'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__34"
-
-    // $ANTLR start "T__35"
-    public final void mT__35() throws RecognitionException {
-        try {
-            int _type = T__35;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:24:7: ( '>' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:24:9: '>'
-            {
-            match('>'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__35"
-
-    // $ANTLR start "T__36"
-    public final void mT__36() throws RecognitionException {
-        try {
-            int _type = T__36;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:25:7: ( '<' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:25:9: '<'
-            {
-            match('<'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__36"
-
-    // $ANTLR start "T__37"
-    public final void mT__37() throws RecognitionException {
-        try {
-            int _type = T__37;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:26:7: ( '>=' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:26:9: '>='
-            {
-            match(">="); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__37"
-
-    // $ANTLR start "T__38"
-    public final void mT__38() throws RecognitionException {
-        try {
-            int _type = T__38;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:27:7: ( '<=' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:27:9: '<='
-            {
-            match("<="); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__38"
-
-    // $ANTLR start "T__39"
-    public final void mT__39() throws RecognitionException {
-        try {
-            int _type = T__39;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:28:7: ( '=' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:28:9: '='
-            {
-            match('='); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__39"
-
-    // $ANTLR start "T__40"
-    public final void mT__40() throws RecognitionException {
-        try {
-            int _type = T__40;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:29:7: ( '+' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:29:9: '+'
-            {
-            match('+'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__40"
-
-    // $ANTLR start "T__41"
-    public final void mT__41() throws RecognitionException {
-        try {
-            int _type = T__41;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:30:7: ( '-' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:30:9: '-'
-            {
-            match('-'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
+        	// do for sure before leaving
         }
     }
     // $ANTLR end "T__41"
@@ -642,10 +90,10 @@ public class gramaLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:31:7: ( '*' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:31:9: '*'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:3:7: ( ';' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:3:9: ';'
             {
-            match('*'); 
+            match(';'); 
 
             }
 
@@ -653,6 +101,7 @@ public class gramaLexer extends Lexer {
             state.channel = _channel;
         }
         finally {
+        	// do for sure before leaving
         }
     }
     // $ANTLR end "T__42"
@@ -662,8 +111,607 @@ public class gramaLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:32:7: ( '/' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:32:9: '/'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:4:7: ( '=' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:4:9: '='
+            {
+            match('='); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__43"
+
+    // $ANTLR start "GREATER"
+    public final void mGREATER() throws RecognitionException {
+        try {
+            int _type = GREATER;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:6:2: ( '>' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:6:4: '>'
+            {
+            match('>'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "GREATER"
+
+    // $ANTLR start "GREATEREQUAL"
+    public final void mGREATEREQUAL() throws RecognitionException {
+        try {
+            int _type = GREATEREQUAL;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:10:2: ( '>=' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:10:4: '>='
+            {
+            match(">="); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "GREATEREQUAL"
+
+    // $ANTLR start "LESSEQUAL"
+    public final void mLESSEQUAL() throws RecognitionException {
+        try {
+            int _type = LESSEQUAL;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:14:2: ( '<=' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:14:4: '<='
+            {
+            match("<="); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "LESSEQUAL"
+
+    // $ANTLR start "LESS"
+    public final void mLESS() throws RecognitionException {
+        try {
+            int _type = LESS;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:18:2: ( '<' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:18:4: '<'
+            {
+            match('<'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "LESS"
+
+    // $ANTLR start "WHILE"
+    public final void mWHILE() throws RecognitionException {
+        try {
+            int _type = WHILE;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:22:2: ( 'while' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:22:4: 'while'
+            {
+            match("while"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "WHILE"
+
+    // $ANTLR start "IF"
+    public final void mIF() throws RecognitionException {
+        try {
+            int _type = IF;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:26:2: ( 'if' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:26:4: 'if'
+            {
+            match("if"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "IF"
+
+    // $ANTLR start "LCURLY"
+    public final void mLCURLY() throws RecognitionException {
+        try {
+            int _type = LCURLY;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:30:2: ( '{' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:30:4: '{'
+            {
+            match('{'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "LCURLY"
+
+    // $ANTLR start "RCURLY"
+    public final void mRCURLY() throws RecognitionException {
+        try {
+            int _type = RCURLY;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:34:2: ( '}' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:34:4: '}'
+            {
+            match('}'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "RCURLY"
+
+    // $ANTLR start "ELSE"
+    public final void mELSE() throws RecognitionException {
+        try {
+            int _type = ELSE;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:38:2: ( 'else' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:38:4: 'else'
+            {
+            match("else"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "ELSE"
+
+    // $ANTLR start "LPAREN"
+    public final void mLPAREN() throws RecognitionException {
+        try {
+            int _type = LPAREN;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:42:2: ( '(' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:42:4: '('
+            {
+            match('('); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "LPAREN"
+
+    // $ANTLR start "RPAREN"
+    public final void mRPAREN() throws RecognitionException {
+        try {
+            int _type = RPAREN;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:46:2: ( ')' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:46:4: ')'
+            {
+            match(')'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "RPAREN"
+
+    // $ANTLR start "MAIN"
+    public final void mMAIN() throws RecognitionException {
+        try {
+            int _type = MAIN;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:50:2: ( 'main ' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:50:4: 'main '
+            {
+            match("main "); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "MAIN"
+
+    // $ANTLR start "T_INT"
+    public final void mT_INT() throws RecognitionException {
+        try {
+            int _type = T_INT;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:54:2: ( 'int' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:54:4: 'int'
+            {
+            match("int"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T_INT"
+
+    // $ANTLR start "T_CHAR"
+    public final void mT_CHAR() throws RecognitionException {
+        try {
+            int _type = T_CHAR;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:58:2: ( 'char' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:58:4: 'char'
+            {
+            match("char"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T_CHAR"
+
+    // $ANTLR start "T_STRING"
+    public final void mT_STRING() throws RecognitionException {
+        try {
+            int _type = T_STRING;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:62:2: ( 'string' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:62:4: 'string'
+            {
+            match("string"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T_STRING"
+
+    // $ANTLR start "T_FLOAT"
+    public final void mT_FLOAT() throws RecognitionException {
+        try {
+            int _type = T_FLOAT;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:66:2: ( 'float' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:66:4: 'float'
+            {
+            match("float"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T_FLOAT"
+
+    // $ANTLR start "TRUE"
+    public final void mTRUE() throws RecognitionException {
+        try {
+            int _type = TRUE;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:70:2: ( 'true' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:70:4: 'true'
+            {
+            match("true"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "TRUE"
+
+    // $ANTLR start "FALSE"
+    public final void mFALSE() throws RecognitionException {
+        try {
+            int _type = FALSE;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:74:2: ( 'false' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:74:4: 'false'
+            {
+            match("false"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "FALSE"
+
+    // $ANTLR start "NOTEQUAL"
+    public final void mNOTEQUAL() throws RecognitionException {
+        try {
+            int _type = NOTEQUAL;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:78:2: ( '!=' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:78:4: '!='
+            {
+            match("!="); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "NOTEQUAL"
+
+    // $ANTLR start "EQUAL"
+    public final void mEQUAL() throws RecognitionException {
+        try {
+            int _type = EQUAL;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:82:2: ( '==' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:82:4: '=='
+            {
+            match("=="); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "EQUAL"
+
+    // $ANTLR start "NOT"
+    public final void mNOT() throws RecognitionException {
+        try {
+            int _type = NOT;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:86:2: ( '~' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:86:4: '~'
+            {
+            match('~'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "NOT"
+
+    // $ANTLR start "OR"
+    public final void mOR() throws RecognitionException {
+        try {
+            int _type = OR;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:90:2: ( '||' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:90:4: '||'
+            {
+            match("||"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "OR"
+
+    // $ANTLR start "AND"
+    public final void mAND() throws RecognitionException {
+        try {
+            int _type = AND;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:94:2: ( '&&' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:94:4: '&&'
+            {
+            match("&&"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "AND"
+
+    // $ANTLR start "PLUS"
+    public final void mPLUS() throws RecognitionException {
+        try {
+            int _type = PLUS;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:98:2: ( '+' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:98:4: '+'
+            {
+            match('+'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "PLUS"
+
+    // $ANTLR start "MINUS"
+    public final void mMINUS() throws RecognitionException {
+        try {
+            int _type = MINUS;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:102:2: ( '-' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:102:4: '-'
+            {
+            match('-'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "MINUS"
+
+    // $ANTLR start "STAR"
+    public final void mSTAR() throws RecognitionException {
+        try {
+            int _type = STAR;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:106:2: ( '*' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:106:4: '*'
+            {
+            match('*'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "STAR"
+
+    // $ANTLR start "SLASH"
+    public final void mSLASH() throws RecognitionException {
+        try {
+            int _type = SLASH;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:110:2: ( '/' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:110:4: '/'
             {
             match('/'); 
 
@@ -673,50 +721,52 @@ public class gramaLexer extends Lexer {
             state.channel = _channel;
         }
         finally {
+        	// do for sure before leaving
         }
     }
-    // $ANTLR end "T__43"
+    // $ANTLR end "SLASH"
 
     // $ANTLR start "ID"
     public final void mID() throws RecognitionException {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:94:2: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:94:4: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:206:2: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:206:4: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
-            if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
+            if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
-
             }
             else {
                 MismatchedSetException mse = new MismatchedSetException(null,input);
                 recover(mse);
-                throw mse;}
+                throw mse;
+            }
 
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:94:28: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:206:28: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop1:
             do {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( ((LA1_0>='0' && LA1_0<='9')||(LA1_0>='A' && LA1_0<='Z')||LA1_0=='_'||(LA1_0>='a' && LA1_0<='z')) ) {
+                if ( ((LA1_0 >= '0' && LA1_0 <= '9')||(LA1_0 >= 'A' && LA1_0 <= 'Z')||LA1_0=='_'||(LA1_0 >= 'a' && LA1_0 <= 'z')) ) {
                     alt1=1;
                 }
 
 
                 switch (alt1) {
             	case 1 :
-            	    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:
+            	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:
             	    {
-            	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
+            	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
-
             	    }
             	    else {
             	        MismatchedSetException mse = new MismatchedSetException(null,input);
             	        recover(mse);
-            	        throw mse;}
+            	        throw mse;
+            	    }
 
 
             	    }
@@ -734,6 +784,7 @@ public class gramaLexer extends Lexer {
             state.channel = _channel;
         }
         finally {
+        	// do for sure before leaving
         }
     }
     // $ANTLR end "ID"
@@ -743,26 +794,34 @@ public class gramaLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:97:5: ( ( '0' .. '9' )+ )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:97:7: ( '0' .. '9' )+
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:209:5: ( ( '0' .. '9' )+ )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:209:7: ( '0' .. '9' )+
             {
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:97:7: ( '0' .. '9' )+
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:209:7: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
                 int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( ((LA2_0>='0' && LA2_0<='9')) ) {
+                if ( ((LA2_0 >= '0' && LA2_0 <= '9')) ) {
                     alt2=1;
                 }
 
 
                 switch (alt2) {
             	case 1 :
-            	    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:97:7: '0' .. '9'
+            	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:
             	    {
-            	    matchRange('0','9'); 
+            	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
+            	        input.consume();
+            	    }
+            	    else {
+            	        MismatchedSetException mse = new MismatchedSetException(null,input);
+            	        recover(mse);
+            	        throw mse;
+            	    }
+
 
             	    }
             	    break;
@@ -783,6 +842,7 @@ public class gramaLexer extends Lexer {
             state.channel = _channel;
         }
         finally {
+        	// do for sure before leaving
         }
     }
     // $ANTLR end "INT"
@@ -792,26 +852,27 @@ public class gramaLexer extends Lexer {
         try {
             int _type = FLOAT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:101:3: ( ( INT )+ '.' ( INT )+ )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:101:5: ( INT )+ '.' ( INT )+
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:213:3: ( ( INT )+ '.' ( INT )+ )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:213:5: ( INT )+ '.' ( INT )+
             {
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:101:5: ( INT )+
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:213:5: ( INT )+
             int cnt3=0;
             loop3:
             do {
                 int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( ((LA3_0>='0' && LA3_0<='9')) ) {
+                if ( ((LA3_0 >= '0' && LA3_0 <= '9')) ) {
                     alt3=1;
                 }
 
 
                 switch (alt3) {
             	case 1 :
-            	    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:101:5: INT
+            	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:213:5: INT
             	    {
             	    mINT(); 
+
 
             	    }
             	    break;
@@ -825,24 +886,27 @@ public class gramaLexer extends Lexer {
                 cnt3++;
             } while (true);
 
+
             match('.'); 
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:101:14: ( INT )+
+
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:213:14: ( INT )+
             int cnt4=0;
             loop4:
             do {
                 int alt4=2;
                 int LA4_0 = input.LA(1);
 
-                if ( ((LA4_0>='0' && LA4_0<='9')) ) {
+                if ( ((LA4_0 >= '0' && LA4_0 <= '9')) ) {
                     alt4=1;
                 }
 
 
                 switch (alt4) {
             	case 1 :
-            	    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:101:14: INT
+            	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:213:14: INT
             	    {
             	    mINT(); 
+
 
             	    }
             	    break;
@@ -863,6 +927,7 @@ public class gramaLexer extends Lexer {
             state.channel = _channel;
         }
         finally {
+        	// do for sure before leaving
         }
     }
     // $ANTLR end "FLOAT"
@@ -872,7 +937,7 @@ public class gramaLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:105:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:217:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -890,6 +955,7 @@ public class gramaLexer extends Lexer {
                         new NoViableAltException("", 8, 1, input);
 
                     throw nvae;
+
                 }
             }
             else {
@@ -897,36 +963,39 @@ public class gramaLexer extends Lexer {
                     new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
+
             }
             switch (alt8) {
                 case 1 :
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:105:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:217:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
                     {
                     match("//"); 
 
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:105:14: (~ ( '\\n' | '\\r' ) )*
+
+
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:217:14: (~ ( '\\n' | '\\r' ) )*
                     loop5:
                     do {
                         int alt5=2;
                         int LA5_0 = input.LA(1);
 
-                        if ( ((LA5_0>='\u0000' && LA5_0<='\t')||(LA5_0>='\u000B' && LA5_0<='\f')||(LA5_0>='\u000E' && LA5_0<='\uFFFF')) ) {
+                        if ( ((LA5_0 >= '\u0000' && LA5_0 <= '\t')||(LA5_0 >= '\u000B' && LA5_0 <= '\f')||(LA5_0 >= '\u000E' && LA5_0 <= '\uFFFF')) ) {
                             alt5=1;
                         }
 
 
                         switch (alt5) {
                     	case 1 :
-                    	    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:105:14: ~ ( '\\n' | '\\r' )
+                    	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:
                     	    {
-                    	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
+                    	    if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t')||(input.LA(1) >= '\u000B' && input.LA(1) <= '\f')||(input.LA(1) >= '\u000E' && input.LA(1) <= '\uFFFF') ) {
                     	        input.consume();
-
                     	    }
                     	    else {
                     	        MismatchedSetException mse = new MismatchedSetException(null,input);
                     	        recover(mse);
-                    	        throw mse;}
+                    	        throw mse;
+                    	    }
 
 
                     	    }
@@ -937,7 +1006,8 @@ public class gramaLexer extends Lexer {
                         }
                     } while (true);
 
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:105:28: ( '\\r' )?
+
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:217:28: ( '\\r' )?
                     int alt6=2;
                     int LA6_0 = input.LA(1);
 
@@ -946,7 +1016,7 @@ public class gramaLexer extends Lexer {
                     }
                     switch (alt6) {
                         case 1 :
-                            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:105:28: '\\r'
+                            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:217:28: '\\r'
                             {
                             match('\r'); 
 
@@ -955,17 +1025,21 @@ public class gramaLexer extends Lexer {
 
                     }
 
+
                     match('\n'); 
+
                     _channel=HIDDEN;
 
                     }
                     break;
                 case 2 :
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:106:9: '/*' ( options {greedy=false; } : . )* '*/'
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:218:9: '/*' ( options {greedy=false; } : . )* '*/'
                     {
                     match("/*"); 
 
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:106:14: ( options {greedy=false; } : . )*
+
+
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:218:14: ( options {greedy=false; } : . )*
                     loop7:
                     do {
                         int alt7=2;
@@ -977,20 +1051,20 @@ public class gramaLexer extends Lexer {
                             if ( (LA7_1=='/') ) {
                                 alt7=2;
                             }
-                            else if ( ((LA7_1>='\u0000' && LA7_1<='.')||(LA7_1>='0' && LA7_1<='\uFFFF')) ) {
+                            else if ( ((LA7_1 >= '\u0000' && LA7_1 <= '.')||(LA7_1 >= '0' && LA7_1 <= '\uFFFF')) ) {
                                 alt7=1;
                             }
 
 
                         }
-                        else if ( ((LA7_0>='\u0000' && LA7_0<=')')||(LA7_0>='+' && LA7_0<='\uFFFF')) ) {
+                        else if ( ((LA7_0 >= '\u0000' && LA7_0 <= ')')||(LA7_0 >= '+' && LA7_0 <= '\uFFFF')) ) {
                             alt7=1;
                         }
 
 
                         switch (alt7) {
                     	case 1 :
-                    	    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:106:42: .
+                    	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:218:42: .
                     	    {
                     	    matchAny(); 
 
@@ -1002,7 +1076,10 @@ public class gramaLexer extends Lexer {
                         }
                     } while (true);
 
+
                     match("*/"); 
+
+
 
                     _channel=HIDDEN;
 
@@ -1014,6 +1091,7 @@ public class gramaLexer extends Lexer {
             state.channel = _channel;
         }
         finally {
+        	// do for sure before leaving
         }
     }
     // $ANTLR end "COMMENT"
@@ -1023,11 +1101,12 @@ public class gramaLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:110:5: ( '\"' ( ESC_SEQ | ~ ( '\\\\' | '\"' ) )* '\"' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:110:8: '\"' ( ESC_SEQ | ~ ( '\\\\' | '\"' ) )* '\"'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:222:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:222:8: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
             {
             match('\"'); 
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:110:12: ( ESC_SEQ | ~ ( '\\\\' | '\"' ) )*
+
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:222:12: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
             loop9:
             do {
                 int alt9=3;
@@ -1036,30 +1115,31 @@ public class gramaLexer extends Lexer {
                 if ( (LA9_0=='\\') ) {
                     alt9=1;
                 }
-                else if ( ((LA9_0>='\u0000' && LA9_0<='!')||(LA9_0>='#' && LA9_0<='[')||(LA9_0>=']' && LA9_0<='\uFFFF')) ) {
+                else if ( ((LA9_0 >= '\u0000' && LA9_0 <= '!')||(LA9_0 >= '#' && LA9_0 <= '[')||(LA9_0 >= ']' && LA9_0 <= '\uFFFF')) ) {
                     alt9=2;
                 }
 
 
                 switch (alt9) {
             	case 1 :
-            	    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:110:14: ESC_SEQ
+            	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:222:14: ESC_SEQ
             	    {
             	    mESC_SEQ(); 
+
 
             	    }
             	    break;
             	case 2 :
-            	    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:110:24: ~ ( '\\\\' | '\"' )
+            	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:222:24: ~ ( '\\\\' | '\"' )
             	    {
-            	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
+            	    if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '!')||(input.LA(1) >= '#' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
             	        input.consume();
-
             	    }
             	    else {
             	        MismatchedSetException mse = new MismatchedSetException(null,input);
             	        recover(mse);
-            	        throw mse;}
+            	        throw mse;
+            	    }
 
 
             	    }
@@ -1070,6 +1150,7 @@ public class gramaLexer extends Lexer {
                 }
             } while (true);
 
+
             match('\"'); 
 
             }
@@ -1078,6 +1159,7 @@ public class gramaLexer extends Lexer {
             state.channel = _channel;
         }
         finally {
+        	// do for sure before leaving
         }
     }
     // $ANTLR end "STRING"
@@ -1087,18 +1169,19 @@ public class gramaLexer extends Lexer {
         try {
             int _type = CHAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:113:5: ( '\\'' ( ESC_SEQ | ~ ( '\\'' | '\\\\' ) ) '\\'' )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:113:8: '\\'' ( ESC_SEQ | ~ ( '\\'' | '\\\\' ) ) '\\''
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:225:5: ( '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\'' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:225:8: '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\''
             {
             match('\''); 
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:113:13: ( ESC_SEQ | ~ ( '\\'' | '\\\\' ) )
+
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:225:13: ( ESC_SEQ |~ ( '\\'' | '\\\\' ) )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
             if ( (LA10_0=='\\') ) {
                 alt10=1;
             }
-            else if ( ((LA10_0>='\u0000' && LA10_0<='&')||(LA10_0>='(' && LA10_0<='[')||(LA10_0>=']' && LA10_0<='\uFFFF')) ) {
+            else if ( ((LA10_0 >= '\u0000' && LA10_0 <= '&')||(LA10_0 >= '(' && LA10_0 <= '[')||(LA10_0 >= ']' && LA10_0 <= '\uFFFF')) ) {
                 alt10=2;
             }
             else {
@@ -1106,32 +1189,35 @@ public class gramaLexer extends Lexer {
                     new NoViableAltException("", 10, 0, input);
 
                 throw nvae;
+
             }
             switch (alt10) {
                 case 1 :
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:113:15: ESC_SEQ
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:225:15: ESC_SEQ
                     {
                     mESC_SEQ(); 
+
 
                     }
                     break;
                 case 2 :
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:113:25: ~ ( '\\'' | '\\\\' )
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:225:25: ~ ( '\\'' | '\\\\' )
                     {
-                    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
+                    if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '&')||(input.LA(1) >= '(' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
                         input.consume();
-
                     }
                     else {
                         MismatchedSetException mse = new MismatchedSetException(null,input);
                         recover(mse);
-                        throw mse;}
+                        throw mse;
+                    }
 
 
                     }
                     break;
 
             }
+
 
             match('\''); 
 
@@ -1141,6 +1227,7 @@ public class gramaLexer extends Lexer {
             state.channel = _channel;
         }
         finally {
+        	// do for sure before leaving
         }
     }
     // $ANTLR end "CHAR"
@@ -1148,23 +1235,25 @@ public class gramaLexer extends Lexer {
     // $ANTLR start "HEX_DIGIT"
     public final void mHEX_DIGIT() throws RecognitionException {
         try {
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:117:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:117:13: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:230:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:
             {
-            if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
+            if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'F')||(input.LA(1) >= 'a' && input.LA(1) <= 'f') ) {
                 input.consume();
-
             }
             else {
                 MismatchedSetException mse = new MismatchedSetException(null,input);
                 recover(mse);
-                throw mse;}
+                throw mse;
+            }
 
 
             }
 
+
         }
         finally {
+        	// do for sure before leaving
         }
     }
     // $ANTLR end "HEX_DIGIT"
@@ -1172,7 +1261,7 @@ public class gramaLexer extends Lexer {
     // $ANTLR start "ESC_SEQ"
     public final void mESC_SEQ() throws RecognitionException {
         try {
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:121:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:234:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
             int alt11=3;
             int LA11_0 = input.LA(1);
 
@@ -1212,6 +1301,7 @@ public class gramaLexer extends Lexer {
                         new NoViableAltException("", 11, 1, input);
 
                     throw nvae;
+
                 }
 
             }
@@ -1220,42 +1310,48 @@ public class gramaLexer extends Lexer {
                     new NoViableAltException("", 11, 0, input);
 
                 throw nvae;
+
             }
             switch (alt11) {
                 case 1 :
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:121:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:234:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
                     {
                     match('\\'); 
+
                     if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
                         input.consume();
-
                     }
                     else {
                         MismatchedSetException mse = new MismatchedSetException(null,input);
                         recover(mse);
-                        throw mse;}
+                        throw mse;
+                    }
 
 
                     }
                     break;
                 case 2 :
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:122:9: UNICODE_ESC
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:235:9: UNICODE_ESC
                     {
                     mUNICODE_ESC(); 
+
 
                     }
                     break;
                 case 3 :
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:123:9: OCTAL_ESC
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:236:9: OCTAL_ESC
                     {
                     mOCTAL_ESC(); 
+
 
                     }
                     break;
 
             }
+
         }
         finally {
+        	// do for sure before leaving
         }
     }
     // $ANTLR end "ESC_SEQ"
@@ -1263,42 +1359,46 @@ public class gramaLexer extends Lexer {
     // $ANTLR start "OCTAL_ESC"
     public final void mOCTAL_ESC() throws RecognitionException {
         try {
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:128:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:241:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
             int alt12=3;
             int LA12_0 = input.LA(1);
 
             if ( (LA12_0=='\\') ) {
                 int LA12_1 = input.LA(2);
 
-                if ( ((LA12_1>='0' && LA12_1<='3')) ) {
+                if ( ((LA12_1 >= '0' && LA12_1 <= '3')) ) {
                     int LA12_2 = input.LA(3);
 
-                    if ( ((LA12_2>='0' && LA12_2<='7')) ) {
+                    if ( ((LA12_2 >= '0' && LA12_2 <= '7')) ) {
                         int LA12_4 = input.LA(4);
 
-                        if ( ((LA12_4>='0' && LA12_4<='7')) ) {
+                        if ( ((LA12_4 >= '0' && LA12_4 <= '7')) ) {
                             alt12=1;
                         }
                         else {
-                            alt12=2;}
+                            alt12=2;
+                        }
                     }
                     else {
-                        alt12=3;}
+                        alt12=3;
+                    }
                 }
-                else if ( ((LA12_1>='4' && LA12_1<='7')) ) {
+                else if ( ((LA12_1 >= '4' && LA12_1 <= '7')) ) {
                     int LA12_3 = input.LA(3);
 
-                    if ( ((LA12_3>='0' && LA12_3<='7')) ) {
+                    if ( ((LA12_3 >= '0' && LA12_3 <= '7')) ) {
                         alt12=2;
                     }
                     else {
-                        alt12=3;}
+                        alt12=3;
+                    }
                 }
                 else {
                     NoViableAltException nvae =
                         new NoViableAltException("", 12, 1, input);
 
                     throw nvae;
+
                 }
             }
             else {
@@ -1306,66 +1406,85 @@ public class gramaLexer extends Lexer {
                     new NoViableAltException("", 12, 0, input);
 
                 throw nvae;
+
             }
             switch (alt12) {
                 case 1 :
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:128:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:241:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     match('\\'); 
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:128:14: ( '0' .. '3' )
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:128:15: '0' .. '3'
-                    {
-                    matchRange('0','3'); 
 
+                    if ( (input.LA(1) >= '0' && input.LA(1) <= '3') ) {
+                        input.consume();
+                    }
+                    else {
+                        MismatchedSetException mse = new MismatchedSetException(null,input);
+                        recover(mse);
+                        throw mse;
                     }
 
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:128:25: ( '0' .. '7' )
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:128:26: '0' .. '7'
-                    {
-                    matchRange('0','7'); 
 
+                    if ( (input.LA(1) >= '0' && input.LA(1) <= '7') ) {
+                        input.consume();
+                    }
+                    else {
+                        MismatchedSetException mse = new MismatchedSetException(null,input);
+                        recover(mse);
+                        throw mse;
                     }
 
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:128:36: ( '0' .. '7' )
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:128:37: '0' .. '7'
-                    {
-                    matchRange('0','7'); 
 
+                    if ( (input.LA(1) >= '0' && input.LA(1) <= '7') ) {
+                        input.consume();
+                    }
+                    else {
+                        MismatchedSetException mse = new MismatchedSetException(null,input);
+                        recover(mse);
+                        throw mse;
                     }
 
 
                     }
                     break;
                 case 2 :
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:129:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:242:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     match('\\'); 
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:129:14: ( '0' .. '7' )
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:129:15: '0' .. '7'
-                    {
-                    matchRange('0','7'); 
 
+                    if ( (input.LA(1) >= '0' && input.LA(1) <= '7') ) {
+                        input.consume();
+                    }
+                    else {
+                        MismatchedSetException mse = new MismatchedSetException(null,input);
+                        recover(mse);
+                        throw mse;
                     }
 
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:129:25: ( '0' .. '7' )
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:129:26: '0' .. '7'
-                    {
-                    matchRange('0','7'); 
 
+                    if ( (input.LA(1) >= '0' && input.LA(1) <= '7') ) {
+                        input.consume();
+                    }
+                    else {
+                        MismatchedSetException mse = new MismatchedSetException(null,input);
+                        recover(mse);
+                        throw mse;
                     }
 
 
                     }
                     break;
                 case 3 :
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:130:9: '\\\\' ( '0' .. '7' )
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:243:9: '\\\\' ( '0' .. '7' )
                     {
                     match('\\'); 
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:130:14: ( '0' .. '7' )
-                    // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:130:15: '0' .. '7'
-                    {
-                    matchRange('0','7'); 
 
+                    if ( (input.LA(1) >= '0' && input.LA(1) <= '7') ) {
+                        input.consume();
+                    }
+                    else {
+                        MismatchedSetException mse = new MismatchedSetException(null,input);
+                        recover(mse);
+                        throw mse;
                     }
 
 
@@ -1373,8 +1492,10 @@ public class gramaLexer extends Lexer {
                     break;
 
             }
+
         }
         finally {
+        	// do for sure before leaving
         }
     }
     // $ANTLR end "OCTAL_ESC"
@@ -1382,278 +1503,325 @@ public class gramaLexer extends Lexer {
     // $ANTLR start "UNICODE_ESC"
     public final void mUNICODE_ESC() throws RecognitionException {
         try {
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:135:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
-            // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:135:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:248:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:248:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
             {
             match('\\'); 
+
             match('u'); 
+
             mHEX_DIGIT(); 
+
+
             mHEX_DIGIT(); 
+
+
             mHEX_DIGIT(); 
+
+
             mHEX_DIGIT(); 
+
 
             }
 
+
         }
         finally {
+        	// do for sure before leaving
         }
     }
     // $ANTLR end "UNICODE_ESC"
 
     public void mTokens() throws RecognitionException {
-        // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:8: ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | ID | INT | FLOAT | COMMENT | STRING | CHAR )
+        // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:8: ( T__41 | T__42 | T__43 | GREATER | GREATEREQUAL | LESSEQUAL | LESS | WHILE | IF | LCURLY | RCURLY | ELSE | LPAREN | RPAREN | MAIN | T_INT | T_CHAR | T_STRING | T_FLOAT | TRUE | FALSE | NOTEQUAL | EQUAL | NOT | OR | AND | PLUS | MINUS | STAR | SLASH | ID | INT | FLOAT | COMMENT | STRING | CHAR )
         int alt13=36;
         alt13 = dfa13.predict(input);
         switch (alt13) {
             case 1 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:10: T__14
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:10: T__41
                 {
-                mT__14(); 
+                mT__41(); 
+
 
                 }
                 break;
             case 2 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:16: T__15
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:16: T__42
                 {
-                mT__15(); 
+                mT__42(); 
+
 
                 }
                 break;
             case 3 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:22: T__16
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:22: T__43
                 {
-                mT__16(); 
+                mT__43(); 
+
 
                 }
                 break;
             case 4 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:28: T__17
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:28: GREATER
                 {
-                mT__17(); 
+                mGREATER(); 
+
 
                 }
                 break;
             case 5 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:34: T__18
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:36: GREATEREQUAL
                 {
-                mT__18(); 
+                mGREATEREQUAL(); 
+
 
                 }
                 break;
             case 6 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:40: T__19
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:49: LESSEQUAL
                 {
-                mT__19(); 
+                mLESSEQUAL(); 
+
 
                 }
                 break;
             case 7 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:46: T__20
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:59: LESS
                 {
-                mT__20(); 
+                mLESS(); 
+
 
                 }
                 break;
             case 8 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:52: T__21
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:64: WHILE
                 {
-                mT__21(); 
+                mWHILE(); 
+
 
                 }
                 break;
             case 9 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:58: T__22
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:70: IF
                 {
-                mT__22(); 
+                mIF(); 
+
 
                 }
                 break;
             case 10 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:64: T__23
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:73: LCURLY
                 {
-                mT__23(); 
+                mLCURLY(); 
+
 
                 }
                 break;
             case 11 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:70: T__24
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:80: RCURLY
                 {
-                mT__24(); 
+                mRCURLY(); 
+
 
                 }
                 break;
             case 12 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:76: T__25
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:87: ELSE
                 {
-                mT__25(); 
+                mELSE(); 
+
 
                 }
                 break;
             case 13 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:82: T__26
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:92: LPAREN
                 {
-                mT__26(); 
+                mLPAREN(); 
+
 
                 }
                 break;
             case 14 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:88: T__27
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:99: RPAREN
                 {
-                mT__27(); 
+                mRPAREN(); 
+
 
                 }
                 break;
             case 15 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:94: T__28
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:106: MAIN
                 {
-                mT__28(); 
+                mMAIN(); 
+
 
                 }
                 break;
             case 16 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:100: T__29
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:111: T_INT
                 {
-                mT__29(); 
+                mT_INT(); 
+
 
                 }
                 break;
             case 17 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:106: T__30
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:117: T_CHAR
                 {
-                mT__30(); 
+                mT_CHAR(); 
+
 
                 }
                 break;
             case 18 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:112: T__31
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:124: T_STRING
                 {
-                mT__31(); 
+                mT_STRING(); 
+
 
                 }
                 break;
             case 19 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:118: T__32
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:133: T_FLOAT
                 {
-                mT__32(); 
+                mT_FLOAT(); 
+
 
                 }
                 break;
             case 20 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:124: T__33
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:141: TRUE
                 {
-                mT__33(); 
+                mTRUE(); 
+
 
                 }
                 break;
             case 21 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:130: T__34
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:146: FALSE
                 {
-                mT__34(); 
+                mFALSE(); 
+
 
                 }
                 break;
             case 22 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:136: T__35
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:152: NOTEQUAL
                 {
-                mT__35(); 
+                mNOTEQUAL(); 
+
 
                 }
                 break;
             case 23 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:142: T__36
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:161: EQUAL
                 {
-                mT__36(); 
+                mEQUAL(); 
+
 
                 }
                 break;
             case 24 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:148: T__37
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:167: NOT
                 {
-                mT__37(); 
+                mNOT(); 
+
 
                 }
                 break;
             case 25 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:154: T__38
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:171: OR
                 {
-                mT__38(); 
+                mOR(); 
+
 
                 }
                 break;
             case 26 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:160: T__39
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:174: AND
                 {
-                mT__39(); 
+                mAND(); 
+
 
                 }
                 break;
             case 27 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:166: T__40
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:178: PLUS
                 {
-                mT__40(); 
+                mPLUS(); 
+
 
                 }
                 break;
             case 28 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:172: T__41
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:183: MINUS
                 {
-                mT__41(); 
+                mMINUS(); 
+
 
                 }
                 break;
             case 29 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:178: T__42
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:189: STAR
                 {
-                mT__42(); 
+                mSTAR(); 
+
 
                 }
                 break;
             case 30 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:184: T__43
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:194: SLASH
                 {
-                mT__43(); 
+                mSLASH(); 
+
 
                 }
                 break;
             case 31 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:190: ID
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:200: ID
                 {
                 mID(); 
+
 
                 }
                 break;
             case 32 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:193: INT
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:203: INT
                 {
                 mINT(); 
+
 
                 }
                 break;
             case 33 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:197: FLOAT
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:207: FLOAT
                 {
                 mFLOAT(); 
+
 
                 }
                 break;
             case 34 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:203: COMMENT
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:213: COMMENT
                 {
                 mCOMMENT(); 
+
 
                 }
                 break;
             case 35 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:211: STRING
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:221: STRING
                 {
                 mSTRING(); 
+
 
                 }
                 break;
             case 36 :
-                // /home/luis/Dropbox/UFSC/20122/INE5426-Compiladores/grama.g:1:218: CHAR
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:228: CHAR
                 {
                 mCHAR(); 
+
 
                 }
                 break;
@@ -1665,60 +1833,60 @@ public class gramaLexer extends Lexer {
 
     protected DFA13 dfa13 = new DFA13(this);
     static final String DFA13_eotS =
-        "\1\uffff\1\32\3\uffff\1\32\2\uffff\5\32\1\uffff\1\32\1\uffff\1\51"+
-        "\3\uffff\1\53\1\55\3\uffff\1\57\1\uffff\1\60\2\uffff\2\32\1\64\7"+
-        "\32\12\uffff\2\32\1\uffff\1\76\10\32\1\uffff\1\107\1\110\3\32\1"+
-        "\114\1\uffff\1\115\2\uffff\1\32\1\117\1\120\2\uffff\1\121\3\uffff";
+        "\3\uffff\1\37\1\41\1\43\2\32\2\uffff\1\32\2\uffff\5\32\7\uffff\1"+
+        "\57\1\uffff\1\60\10\uffff\1\32\1\63\10\32\4\uffff\1\32\1\uffff\1"+
+        "\75\10\32\1\uffff\1\106\1\32\1\110\3\32\1\114\1\115\3\uffff\1\32"+
+        "\1\117\1\120\2\uffff\1\121\3\uffff";
     static final String DFA13_eofS =
         "\122\uffff";
     static final String DFA13_minS =
-        "\1\41\1\141\3\uffff\1\150\2\uffff\1\146\1\154\1\150\1\164\1\141"+
-        "\1\uffff\1\162\1\uffff\1\75\3\uffff\2\75\3\uffff\1\52\1\uffff\1"+
-        "\56\2\uffff\2\151\1\60\1\164\1\163\1\141\1\162\1\157\1\154\1\165"+
-        "\12\uffff\1\156\1\154\1\uffff\1\60\1\145\1\162\1\151\1\141\1\163"+
-        "\1\145\1\40\1\145\1\uffff\2\60\1\156\1\164\1\145\1\60\1\uffff\1"+
-        "\60\2\uffff\1\147\2\60\2\uffff\1\60\3\uffff";
+        "\1\41\2\uffff\3\75\1\150\1\146\2\uffff\1\154\2\uffff\1\141\1\150"+
+        "\1\164\1\141\1\162\7\uffff\1\52\1\uffff\1\56\10\uffff\1\151\1\60"+
+        "\1\164\1\163\1\151\1\141\1\162\1\157\1\154\1\165\4\uffff\1\154\1"+
+        "\uffff\1\60\1\145\1\156\1\162\1\151\1\141\1\163\2\145\1\uffff\1"+
+        "\60\1\40\1\60\1\156\1\164\1\145\2\60\3\uffff\1\147\2\60\2\uffff"+
+        "\1\60\3\uffff";
     static final String DFA13_maxS =
-        "\1\176\1\141\3\uffff\1\150\2\uffff\1\156\1\154\1\150\1\164\1\154"+
-        "\1\uffff\1\162\1\uffff\1\75\3\uffff\2\75\3\uffff\1\57\1\uffff\1"+
-        "\71\2\uffff\2\151\1\172\1\164\1\163\1\141\1\162\1\157\1\154\1\165"+
-        "\12\uffff\1\156\1\154\1\uffff\1\172\1\145\1\162\1\151\1\141\1\163"+
-        "\1\145\1\40\1\145\1\uffff\2\172\1\156\1\164\1\145\1\172\1\uffff"+
-        "\1\172\2\uffff\1\147\2\172\2\uffff\1\172\3\uffff";
+        "\1\176\2\uffff\3\75\1\150\1\156\2\uffff\1\154\2\uffff\1\141\1\150"+
+        "\1\164\1\154\1\162\7\uffff\1\57\1\uffff\1\71\10\uffff\1\151\1\172"+
+        "\1\164\1\163\1\151\1\141\1\162\1\157\1\154\1\165\4\uffff\1\154\1"+
+        "\uffff\1\172\1\145\1\156\1\162\1\151\1\141\1\163\2\145\1\uffff\1"+
+        "\172\1\40\1\172\1\156\1\164\1\145\2\172\3\uffff\1\147\2\172\2\uffff"+
+        "\1\172\3\uffff";
     static final String DFA13_acceptS =
-        "\2\uffff\1\2\1\3\1\4\1\uffff\1\6\1\7\5\uffff\1\16\1\uffff\1\21\1"+
-        "\uffff\1\23\1\24\1\25\2\uffff\1\33\1\34\1\35\1\uffff\1\37\1\uffff"+
-        "\1\43\1\44\12\uffff\1\22\1\32\1\30\1\26\1\31\1\27\1\42\1\36\1\40"+
-        "\1\41\2\uffff\1\10\11\uffff\1\12\6\uffff\1\1\1\uffff\1\11\1\13\3"+
-        "\uffff\1\17\1\5\1\uffff\1\15\1\20\1\14";
+        "\1\uffff\1\1\1\2\5\uffff\1\12\1\13\1\uffff\1\15\1\16\5\uffff\1\26"+
+        "\1\30\1\31\1\32\1\33\1\34\1\35\1\uffff\1\37\1\uffff\1\43\1\44\1"+
+        "\27\1\3\1\5\1\4\1\6\1\7\12\uffff\1\42\1\36\1\40\1\41\1\uffff\1\11"+
+        "\11\uffff\1\20\10\uffff\1\14\1\17\1\21\3\uffff\1\24\1\10\1\uffff"+
+        "\1\23\1\25\1\22";
     static final String DFA13_specialS =
         "\122\uffff}>";
     static final String[] DFA13_transitionS = {
-            "\1\17\1\34\3\uffff\1\22\1\35\1\6\1\7\1\30\1\26\1\15\1\27\1\uffff"+
-            "\1\31\12\33\1\uffff\1\4\1\25\1\20\1\24\2\uffff\32\32\4\uffff"+
-            "\1\32\1\uffff\2\32\1\12\1\32\1\11\1\14\2\32\1\10\3\32\1\1\5"+
-            "\32\1\13\1\16\2\32\1\5\3\32\1\2\1\21\1\3\1\23",
+            "\1\22\1\34\3\uffff\1\25\1\35\1\13\1\14\1\30\1\26\1\1\1\27\1"+
+            "\uffff\1\31\12\33\1\uffff\1\2\1\5\1\3\1\4\2\uffff\32\32\4\uffff"+
+            "\1\32\1\uffff\2\32\1\16\1\32\1\12\1\20\2\32\1\7\3\32\1\15\5"+
+            "\32\1\17\1\21\2\32\1\6\3\32\1\10\1\24\1\11\1\23",
+            "",
+            "",
             "\1\36",
-            "",
-            "",
-            "",
-            "\1\37",
-            "",
-            "",
-            "\1\40\7\uffff\1\41",
+            "\1\40",
             "\1\42",
-            "\1\43",
             "\1\44",
-            "\1\46\12\uffff\1\45",
+            "\1\45\7\uffff\1\46",
+            "",
             "",
             "\1\47",
             "",
+            "",
             "\1\50",
-            "",
-            "",
-            "",
+            "\1\51",
             "\1\52",
-            "\1\54",
+            "\1\54\12\uffff\1\53",
+            "\1\55",
+            "",
+            "",
+            "",
+            "",
             "",
             "",
             "",
@@ -1727,9 +1895,15 @@ public class gramaLexer extends Lexer {
             "\1\61\1\uffff\12\33",
             "",
             "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\62",
-            "\1\63",
             "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
+            "\1\64",
             "\1\65",
             "\1\66",
             "\1\67",
@@ -1741,16 +1915,10 @@ public class gramaLexer extends Lexer {
             "",
             "",
             "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\74",
-            "\1\75",
             "",
             "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
+            "\1\76",
             "\1\77",
             "\1\100",
             "\1\101",
@@ -1758,16 +1926,16 @@ public class gramaLexer extends Lexer {
             "\1\103",
             "\1\104",
             "\1\105",
-            "\1\106",
             "",
             "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
+            "\1\107",
             "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
             "\1\111",
             "\1\112",
             "\1\113",
             "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
-            "",
             "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
+            "",
             "",
             "",
             "\1\116",
@@ -1811,7 +1979,7 @@ public class gramaLexer extends Lexer {
             this.transition = DFA13_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | ID | INT | FLOAT | COMMENT | STRING | CHAR );";
+            return "1:1: Tokens : ( T__41 | T__42 | T__43 | GREATER | GREATEREQUAL | LESSEQUAL | LESS | WHILE | IF | LCURLY | RCURLY | ELSE | LPAREN | RPAREN | MAIN | T_INT | T_CHAR | T_STRING | T_FLOAT | TRUE | FALSE | NOTEQUAL | EQUAL | NOT | OR | AND | PLUS | MINUS | STAR | SLASH | ID | INT | FLOAT | COMMENT | STRING | CHAR );";
         }
     }
  
