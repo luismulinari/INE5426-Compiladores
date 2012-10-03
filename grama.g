@@ -1,27 +1,26 @@
 grammar grama;
 
 grama
-	: 'main' '{' bloco* '}'
+	: 'main ' '{' bloco* '}'
 	;
 
 bloco
-	: declaraVariavel ';'
+	: definicao_variavel ';'
 	| atribuicaoVariavel ';'
 	| chamadaFuncao ';'
 	| definicao_if
 	| definicao_while
 	;
 
-definicao_if
-	 : 'if' '(' condicao ')' '{' bloco '}' ('else' '{' bloco '}')?
-	 ;
-
 definicao_while
 	: 'while' '(' condicao ')' '{' bloco '}'
 	;
 
+definicao_if
+	 : 'if' '(' condicao ')' '{' bloco '}' ('else' '{' bloco '}')?
+	 ;
 
-declaraVariavel
+definicao_variavel
 	: type ID
 	;
 
@@ -43,8 +42,8 @@ declaracaoSimbolo
 condicao
 	: 'true'
 	| 'false'
-	| '(' (ID | INT) (operacaoBooleana) (ID | INT) ')' (operacaoBooleana condicao)?
-	|(ID | INT) (operacaoBooleana) (ID | INT)
+	| '(' (argumento) (operacaoBooleana) (argumento) ')' (operacaoBooleana condicao)?
+	|(argumento) (operacaoBooleana) (argumento)
 	;
 
 
@@ -61,7 +60,7 @@ operacaoBooleana
 	;
 
 chamadaFuncao
-	 : ID '(' ID? (',' ID )* ')'
+	 : ID '(' (argumento) ? (',' (argumento) )* ')'
 	 ;
 
 atribuicaoVariavel
@@ -71,8 +70,17 @@ atribuicaoVariavel
 // Colocar precedencia de parenteses e verificar prioriodades das operacoes artimeticas
 expressao
 	:
-	| (ID | chamadaFuncao | INT | FLOAT ) (operacaoAritmetica expressao)?
+	| argumento (operacaoAritmetica expressao)?
 	| '(' expressao ')'
+	;
+
+argumento 
+	: ID
+	| INT
+	| FLOAT
+	| CHAR
+	| STRING
+	| chamadaFuncao
 	;
 
 operacaoAritmetica
