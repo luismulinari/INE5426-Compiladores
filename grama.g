@@ -1,7 +1,7 @@
 grammar grama;
 
 grama
-	: 'main ' '{' bloco* '}'
+	: MAIN LCURLY bloco* RCURLY
 	;
 
 bloco
@@ -13,11 +13,11 @@ bloco
 	;
 
 definicao_while
-	: 'while' '(' condicao ')' '{' bloco '}'
+	: WHILE LPAREN condicao RPAREN LCURLY bloco RCURLY
 	;
 
 definicao_if
-	 : 'if' '(' condicao ')' '{' bloco '}' ('else' '{' bloco '}')?
+	 : IF LPAREN condicao RPAREN LCURLY bloco RCURLY (ELSE LCURLY bloco RCURLY)?
 	 ;
 
 definicao_variavel
@@ -25,14 +25,14 @@ definicao_variavel
 	;
 
 type
-  	: 'int'
-	| 'char'
-	| 'string'
-	| 'float'
+  	: T_INT
+	| T_CHAR
+	| T_STRING
+	| T_FLOAT
 	;
 
 funcao
-	: type declaracaoSimbolo '(' declaracaoSimbolo (',' declaracaoSimbolo)* ')' '{' bloco '}'
+	: type declaracaoSimbolo LPAREN declaracaoSimbolo (',' declaracaoSimbolo)* RPAREN LCURLY bloco RCURLY
 	;
 
 declaracaoSimbolo
@@ -40,27 +40,27 @@ declaracaoSimbolo
 	;
 
 condicao
-	: 'true'
-	| 'false'
-	| '(' (argumento) (operacaoBooleana) (argumento) ')' (operacaoBooleana condicao)?
+	: TRUE
+	| FALSE
+	| LPAREN (argumento) (operacaoBooleana) (argumento) RPAREN (operacaoBooleana condicao)?
 	|(argumento) (operacaoBooleana) (argumento)
 	;
 
 
 operacaoBooleana
-	: '!='
-	| '=='
-	| '||'
-	| '&&'
-	| '~'
-	| '>'
-	| '<'
-	| '>='
-	| '<='
+	: NOTEQUAL
+	| EQUAL
+	| OR
+	| AND
+	| NOT
+	| GREATER
+	| LESS
+	| GREATEREQUAL
+	| LESSEQUAL
 	;
 
 chamadaFuncao
-	 : ID '(' (argumento) ? (',' (argumento) )* ')'
+	 : ID LPAREN (argumento) ? (',' (argumento) )* RPAREN
 	 ;
 
 atribuicaoVariavel
@@ -71,7 +71,7 @@ atribuicaoVariavel
 expressao
 	:
 	| argumento (operacaoAritmetica expressao)?
-	| '(' expressao ')'
+	| LPAREN expressao RPAREN
 	;
 
 argumento 
@@ -84,10 +84,10 @@ argumento
 	;
 
 operacaoAritmetica
-	: '+'
-	| '-'
-	| '*'
-	| '/'
+	: PLUS
+	| MINUS
+	| STAR
+	| SLASH
 	;
 
 ID
@@ -134,3 +134,114 @@ fragment
 UNICODE_ESC
     :   '\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
     ;
+
+
+// TOKENS
+
+GREATER
+	:	'>'
+	;
+
+GREATEREQUAL
+	:	'>='
+	;
+
+LESSEQUAL
+	:	'<='
+	;
+
+LESS
+	:	'<'
+	;
+
+WHILE
+	:	'while'
+	;
+
+IF
+	:	'if'
+	;
+
+LCURLY
+	:	'{'
+	;
+
+RCURLY
+	:	'}'
+	;
+
+ELSE
+	:	'else'
+	;
+
+LPAREN
+	:	'('
+	;
+
+RPAREN
+	:	')'
+	;
+
+MAIN
+	:	'main '
+	;
+
+T_INT
+	:	'int'
+	;
+
+T_CHAR
+	:	'char'
+	;
+
+T_STRING
+	:	'string'
+	;
+
+T_FLOAT
+	:	'float'
+	;
+
+TRUE
+	:	'true'
+	;
+
+FALSE
+	:	'false'
+	;
+
+NOTEQUAL
+	:	'!='
+	;
+
+EQUAL
+	:	'=='
+	;
+
+NOT
+	:	'~'
+	;
+
+OR
+	:	'||'
+	;
+
+AND
+	:	'&&'
+	;
+
+PLUS
+	:	'+'
+	;
+
+MINUS
+	:	'-'
+	;
+
+STAR
+	:	'*'
+	;
+
+SLASH
+	:	'/'
+	;
