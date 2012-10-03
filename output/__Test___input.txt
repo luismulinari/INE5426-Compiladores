@@ -1,0 +1,9 @@
+main {
+    int a;
+    a = 20;
+    while (10 == funcao(10, 20, abc)) {
+        if (10 == 10) {
+            teste(10, 20, 30);
+        }
+    }
+}
