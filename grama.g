@@ -245,3 +245,6 @@ fragment
 UNICODE_ESC
     :   '\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
     ;
+
+WS  :  (' ' | '\r' | '\t' | '\n' | '\u000C' ) + { $channel=HIDDEN; }
+    ;

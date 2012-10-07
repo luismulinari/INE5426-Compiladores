@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g 2012-10-07 20:07:12
+// $ANTLR 3.4 C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g 2012-10-07 20:28:21
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -8,9 +8,9 @@ import java.util.ArrayList;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class gramaLexer extends Lexer {
     public static final int EOF=-1;
-    public static final int T__41=41;
     public static final int T__42=42;
     public static final int T__43=43;
+    public static final int T__44=44;
     public static final int AND=4;
     public static final int CHAR=5;
     public static final int COMMENT=6;
@@ -48,6 +48,7 @@ public class gramaLexer extends Lexer {
     public static final int T_STRING=38;
     public static final int UNICODE_ESC=39;
     public static final int WHILE=40;
+    public static final int WS=41;
 
     // delegates
     // delegators
@@ -64,36 +65,15 @@ public class gramaLexer extends Lexer {
     }
     public String getGrammarFileName() { return "C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g"; }
 
-    // $ANTLR start "T__41"
-    public final void mT__41() throws RecognitionException {
-        try {
-            int _type = T__41;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:2:7: ( ',' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:2:9: ','
-            {
-            match(','); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        	// do for sure before leaving
-        }
-    }
-    // $ANTLR end "T__41"
-
     // $ANTLR start "T__42"
     public final void mT__42() throws RecognitionException {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:3:7: ( ';' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:3:9: ';'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:2:7: ( ',' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:2:9: ','
             {
-            match(';'); 
+            match(','); 
 
             }
 
@@ -111,6 +91,27 @@ public class gramaLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:3:7: ( ';' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:3:9: ';'
+            {
+            match(';'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__43"
+
+    // $ANTLR start "T__44"
+    public final void mT__44() throws RecognitionException {
+        try {
+            int _type = T__44;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
             // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:4:7: ( '=' )
             // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:4:9: '='
             {
@@ -125,7 +126,7 @@ public class gramaLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "T__43"
+    // $ANTLR end "T__44"
 
     // $ANTLR start "GREATER"
     public final void mGREATER() throws RecognitionException {
@@ -1532,31 +1533,91 @@ public class gramaLexer extends Lexer {
     }
     // $ANTLR end "UNICODE_ESC"
 
-    public void mTokens() throws RecognitionException {
-        // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:8: ( T__41 | T__42 | T__43 | GREATER | LESSEQUAL | LESS | WHILE | IF | LCURLY | RCURLY | ELSE | LPAREN | RPAREN | MAIN | T_INT | T_CHAR | T_STRING | T_FLOAT | TRUE | FALSE | NOTEQUAL | EQUAL | NOT | OR | AND | PLUS | MINUS | STAR | SLASH | GREATEREQUAL | ID | INT | FLOAT | COMMENT | STRING | CHAR )
-        int alt13=36;
-        alt13 = dfa13.predict(input);
-        switch (alt13) {
-            case 1 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:10: T__41
-                {
-                mT__41(); 
+    // $ANTLR start "WS"
+    public final void mWS() throws RecognitionException {
+        try {
+            int _type = WS;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:249:5: ( ( ' ' | '\\r' | '\\t' | '\\n' | '\\u000C' )+ )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:249:8: ( ' ' | '\\r' | '\\t' | '\\n' | '\\u000C' )+
+            {
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:249:8: ( ' ' | '\\r' | '\\t' | '\\n' | '\\u000C' )+
+            int cnt13=0;
+            loop13:
+            do {
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-
+                if ( ((LA13_0 >= '\t' && LA13_0 <= '\n')||(LA13_0 >= '\f' && LA13_0 <= '\r')||LA13_0==' ') ) {
+                    alt13=1;
                 }
-                break;
-            case 2 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:16: T__42
+
+
+                switch (alt13) {
+            	case 1 :
+            	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:
+            	    {
+            	    if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||(input.LA(1) >= '\f' && input.LA(1) <= '\r')||input.LA(1)==' ' ) {
+            	        input.consume();
+            	    }
+            	    else {
+            	        MismatchedSetException mse = new MismatchedSetException(null,input);
+            	        recover(mse);
+            	        throw mse;
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt13 >= 1 ) break loop13;
+                        EarlyExitException eee =
+                            new EarlyExitException(13, input);
+                        throw eee;
+                }
+                cnt13++;
+            } while (true);
+
+
+             _channel=HIDDEN; 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "WS"
+
+    public void mTokens() throws RecognitionException {
+        // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:8: ( T__42 | T__43 | T__44 | GREATER | LESSEQUAL | LESS | WHILE | IF | LCURLY | RCURLY | ELSE | LPAREN | RPAREN | MAIN | T_INT | T_CHAR | T_STRING | T_FLOAT | TRUE | FALSE | NOTEQUAL | EQUAL | NOT | OR | AND | PLUS | MINUS | STAR | SLASH | GREATEREQUAL | ID | INT | FLOAT | COMMENT | STRING | CHAR | WS )
+        int alt14=37;
+        alt14 = dfa14.predict(input);
+        switch (alt14) {
+            case 1 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:10: T__42
                 {
                 mT__42(); 
 
 
                 }
                 break;
-            case 3 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:22: T__43
+            case 2 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:16: T__43
                 {
                 mT__43(); 
+
+
+                }
+                break;
+            case 3 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:22: T__44
+                {
+                mT__44(); 
 
 
                 }
@@ -1825,64 +1886,73 @@ public class gramaLexer extends Lexer {
 
                 }
                 break;
+            case 37 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:233: WS
+                {
+                mWS(); 
+
+
+                }
+                break;
 
         }
 
     }
 
 
-    protected DFA13 dfa13 = new DFA13(this);
-    static final String DFA13_eotS =
-        "\3\uffff\1\37\1\41\1\43\2\32\2\uffff\1\32\2\uffff\5\32\7\uffff\1"+
-        "\57\1\uffff\1\60\10\uffff\1\32\1\63\10\32\4\uffff\1\32\1\uffff\1"+
-        "\75\10\32\1\uffff\1\106\1\32\1\110\3\32\1\114\1\115\3\uffff\1\32"+
-        "\1\117\1\120\2\uffff\1\121\3\uffff";
-    static final String DFA13_eofS =
-        "\122\uffff";
-    static final String DFA13_minS =
-        "\1\41\2\uffff\3\75\1\150\1\146\2\uffff\1\154\2\uffff\1\141\1\150"+
-        "\1\164\1\141\1\162\7\uffff\1\52\1\uffff\1\56\10\uffff\1\151\1\60"+
+    protected DFA14 dfa14 = new DFA14(this);
+    static final String DFA14_eotS =
+        "\3\uffff\1\40\1\42\1\44\2\32\2\uffff\1\32\2\uffff\5\32\7\uffff\1"+
+        "\60\1\uffff\1\61\11\uffff\1\32\1\64\10\32\4\uffff\1\32\1\uffff\1"+
+        "\76\10\32\1\uffff\1\107\1\32\1\111\3\32\1\115\1\116\3\uffff\1\32"+
+        "\1\120\1\121\2\uffff\1\122\3\uffff";
+    static final String DFA14_eofS =
+        "\123\uffff";
+    static final String DFA14_minS =
+        "\1\11\2\uffff\3\75\1\150\1\146\2\uffff\1\154\2\uffff\1\141\1\150"+
+        "\1\164\1\141\1\162\7\uffff\1\52\1\uffff\1\56\11\uffff\1\151\1\60"+
         "\1\164\1\163\1\151\1\141\1\162\1\157\1\154\1\165\4\uffff\1\154\1"+
         "\uffff\1\60\1\145\1\156\1\162\1\151\1\141\1\163\2\145\1\uffff\1"+
         "\60\1\40\1\60\1\156\1\164\1\145\2\60\3\uffff\1\147\2\60\2\uffff"+
         "\1\60\3\uffff";
-    static final String DFA13_maxS =
+    static final String DFA14_maxS =
         "\1\176\2\uffff\3\75\1\150\1\156\2\uffff\1\154\2\uffff\1\141\1\150"+
-        "\1\164\1\154\1\162\7\uffff\1\57\1\uffff\1\71\10\uffff\1\151\1\172"+
+        "\1\164\1\154\1\162\7\uffff\1\57\1\uffff\1\71\11\uffff\1\151\1\172"+
         "\1\164\1\163\1\151\1\141\1\162\1\157\1\154\1\165\4\uffff\1\154\1"+
         "\uffff\1\172\1\145\1\156\1\162\1\151\1\141\1\163\2\145\1\uffff\1"+
         "\172\1\40\1\172\1\156\1\164\1\145\2\172\3\uffff\1\147\2\172\2\uffff"+
         "\1\172\3\uffff";
-    static final String DFA13_acceptS =
+    static final String DFA14_acceptS =
         "\1\uffff\1\1\1\2\5\uffff\1\11\1\12\1\uffff\1\14\1\15\5\uffff\1\25"+
         "\1\27\1\30\1\31\1\32\1\33\1\34\1\uffff\1\37\1\uffff\1\43\1\44\1"+
-        "\26\1\3\1\36\1\4\1\5\1\6\12\uffff\1\42\1\35\1\40\1\41\1\uffff\1"+
-        "\10\11\uffff\1\17\10\uffff\1\13\1\16\1\20\3\uffff\1\23\1\7\1\uffff"+
+        "\45\1\26\1\3\1\36\1\4\1\5\1\6\12\uffff\1\42\1\35\1\40\1\41\1\uffff"+
+        "\1\10\11\uffff\1\17\10\uffff\1\13\1\16\1\20\3\uffff\1\23\1\7\1\uffff"+
         "\1\22\1\24\1\21";
-    static final String DFA13_specialS =
-        "\122\uffff}>";
-    static final String[] DFA13_transitionS = {
-            "\1\22\1\34\3\uffff\1\25\1\35\1\13\1\14\1\30\1\26\1\1\1\27\1"+
-            "\uffff\1\31\12\33\1\uffff\1\2\1\5\1\3\1\4\2\uffff\32\32\4\uffff"+
-            "\1\32\1\uffff\2\32\1\16\1\32\1\12\1\20\2\32\1\7\3\32\1\15\5"+
-            "\32\1\17\1\21\2\32\1\6\3\32\1\10\1\24\1\11\1\23",
+    static final String DFA14_specialS =
+        "\123\uffff}>";
+    static final String[] DFA14_transitionS = {
+            "\2\36\1\uffff\2\36\22\uffff\1\36\1\22\1\34\3\uffff\1\25\1\35"+
+            "\1\13\1\14\1\30\1\26\1\1\1\27\1\uffff\1\31\12\33\1\uffff\1\2"+
+            "\1\5\1\3\1\4\2\uffff\32\32\4\uffff\1\32\1\uffff\2\32\1\16\1"+
+            "\32\1\12\1\20\2\32\1\7\3\32\1\15\5\32\1\17\1\21\2\32\1\6\3\32"+
+            "\1\10\1\24\1\11\1\23",
             "",
             "",
-            "\1\36",
-            "\1\40",
-            "\1\42",
-            "\1\44",
-            "\1\45\7\uffff\1\46",
-            "",
-            "",
-            "\1\47",
+            "\1\37",
+            "\1\41",
+            "\1\43",
+            "\1\45",
+            "\1\46\7\uffff\1\47",
             "",
             "",
             "\1\50",
+            "",
+            "",
             "\1\51",
             "\1\52",
-            "\1\54\12\uffff\1\53",
-            "\1\55",
+            "\1\53",
+            "\1\55\12\uffff\1\54",
+            "\1\56",
             "",
             "",
             "",
@@ -1890,20 +1960,20 @@ public class gramaLexer extends Lexer {
             "",
             "",
             "",
-            "\1\56\4\uffff\1\56",
+            "\1\57\4\uffff\1\57",
             "",
-            "\1\61\1\uffff\12\33",
-            "",
-            "",
+            "\1\62\1\uffff\12\33",
             "",
             "",
             "",
             "",
             "",
             "",
-            "\1\62",
+            "",
+            "",
+            "",
+            "\1\63",
             "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
-            "\1\64",
             "\1\65",
             "\1\66",
             "\1\67",
@@ -1911,14 +1981,14 @@ public class gramaLexer extends Lexer {
             "\1\71",
             "\1\72",
             "\1\73",
-            "",
-            "",
-            "",
-            "",
             "\1\74",
             "",
+            "",
+            "",
+            "",
+            "\1\75",
+            "",
             "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
-            "\1\76",
             "\1\77",
             "\1\100",
             "\1\101",
@@ -1926,19 +1996,20 @@ public class gramaLexer extends Lexer {
             "\1\103",
             "\1\104",
             "\1\105",
+            "\1\106",
             "",
             "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
-            "\1\107",
+            "\1\110",
             "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
-            "\1\111",
             "\1\112",
             "\1\113",
+            "\1\114",
             "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
             "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
             "",
             "",
             "",
-            "\1\116",
+            "\1\117",
             "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
             "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
             "",
@@ -1949,37 +2020,37 @@ public class gramaLexer extends Lexer {
             ""
     };
 
-    static final short[] DFA13_eot = DFA.unpackEncodedString(DFA13_eotS);
-    static final short[] DFA13_eof = DFA.unpackEncodedString(DFA13_eofS);
-    static final char[] DFA13_min = DFA.unpackEncodedStringToUnsignedChars(DFA13_minS);
-    static final char[] DFA13_max = DFA.unpackEncodedStringToUnsignedChars(DFA13_maxS);
-    static final short[] DFA13_accept = DFA.unpackEncodedString(DFA13_acceptS);
-    static final short[] DFA13_special = DFA.unpackEncodedString(DFA13_specialS);
-    static final short[][] DFA13_transition;
+    static final short[] DFA14_eot = DFA.unpackEncodedString(DFA14_eotS);
+    static final short[] DFA14_eof = DFA.unpackEncodedString(DFA14_eofS);
+    static final char[] DFA14_min = DFA.unpackEncodedStringToUnsignedChars(DFA14_minS);
+    static final char[] DFA14_max = DFA.unpackEncodedStringToUnsignedChars(DFA14_maxS);
+    static final short[] DFA14_accept = DFA.unpackEncodedString(DFA14_acceptS);
+    static final short[] DFA14_special = DFA.unpackEncodedString(DFA14_specialS);
+    static final short[][] DFA14_transition;
 
     static {
-        int numStates = DFA13_transitionS.length;
-        DFA13_transition = new short[numStates][];
+        int numStates = DFA14_transitionS.length;
+        DFA14_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA13_transition[i] = DFA.unpackEncodedString(DFA13_transitionS[i]);
+            DFA14_transition[i] = DFA.unpackEncodedString(DFA14_transitionS[i]);
         }
     }
 
-    class DFA13 extends DFA {
+    class DFA14 extends DFA {
 
-        public DFA13(BaseRecognizer recognizer) {
+        public DFA14(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 13;
-            this.eot = DFA13_eot;
-            this.eof = DFA13_eof;
-            this.min = DFA13_min;
-            this.max = DFA13_max;
-            this.accept = DFA13_accept;
-            this.special = DFA13_special;
-            this.transition = DFA13_transition;
+            this.decisionNumber = 14;
+            this.eot = DFA14_eot;
+            this.eof = DFA14_eof;
+            this.min = DFA14_min;
+            this.max = DFA14_max;
+            this.accept = DFA14_accept;
+            this.special = DFA14_special;
+            this.transition = DFA14_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__41 | T__42 | T__43 | GREATER | LESSEQUAL | LESS | WHILE | IF | LCURLY | RCURLY | ELSE | LPAREN | RPAREN | MAIN | T_INT | T_CHAR | T_STRING | T_FLOAT | TRUE | FALSE | NOTEQUAL | EQUAL | NOT | OR | AND | PLUS | MINUS | STAR | SLASH | GREATEREQUAL | ID | INT | FLOAT | COMMENT | STRING | CHAR );";
+            return "1:1: Tokens : ( T__42 | T__43 | T__44 | GREATER | LESSEQUAL | LESS | WHILE | IF | LCURLY | RCURLY | ELSE | LPAREN | RPAREN | MAIN | T_INT | T_CHAR | T_STRING | T_FLOAT | TRUE | FALSE | NOTEQUAL | EQUAL | NOT | OR | AND | PLUS | MINUS | STAR | SLASH | GREATEREQUAL | ID | INT | FLOAT | COMMENT | STRING | CHAR | WS );";
         }
     }
  

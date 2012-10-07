@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g 2012-10-07 20:07:12
+// $ANTLR 3.4 C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g 2012-10-07 20:28:21
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -10,13 +10,13 @@ import java.io.IOException;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class gramaParser extends DebugParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "AND", "CHAR", "COMMENT", "ELSE", "EQUAL", "ESC_SEQ", "FALSE", "FLOAT", "GREATER", "GREATEREQUAL", "HEX_DIGIT", "ID", "IF", "INT", "LCURLY", "LESS", "LESSEQUAL", "LPAREN", "MAIN", "MINUS", "NOT", "NOTEQUAL", "OCTAL_ESC", "OR", "PLUS", "RCURLY", "RPAREN", "SLASH", "STAR", "STRING", "TRUE", "T_CHAR", "T_FLOAT", "T_INT", "T_STRING", "UNICODE_ESC", "WHILE", "','", "';'", "'='"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "AND", "CHAR", "COMMENT", "ELSE", "EQUAL", "ESC_SEQ", "FALSE", "FLOAT", "GREATER", "GREATEREQUAL", "HEX_DIGIT", "ID", "IF", "INT", "LCURLY", "LESS", "LESSEQUAL", "LPAREN", "MAIN", "MINUS", "NOT", "NOTEQUAL", "OCTAL_ESC", "OR", "PLUS", "RCURLY", "RPAREN", "SLASH", "STAR", "STRING", "TRUE", "T_CHAR", "T_FLOAT", "T_INT", "T_STRING", "UNICODE_ESC", "WHILE", "WS", "','", "';'", "'='"
     };
 
     public static final int EOF=-1;
-    public static final int T__41=41;
     public static final int T__42=42;
     public static final int T__43=43;
+    public static final int T__44=44;
     public static final int AND=4;
     public static final int CHAR=5;
     public static final int COMMENT=6;
@@ -54,6 +54,7 @@ public class gramaParser extends DebugParser {
     public static final int T_STRING=38;
     public static final int UNICODE_ESC=39;
     public static final int WHILE=40;
+    public static final int WS=41;
 
     // delegates
     public Parser[] getDelegates() {
@@ -64,10 +65,10 @@ public class gramaParser extends DebugParser {
 
 
 public static final String[] ruleNames = new String[] {
-    "invalidRule", "expressao", "argumento", "funcao", "chamadaFuncao", 
-    "operacaoAritmetica", "condicao", "atribuicaoVariavel", "type", "declaracaoSimbolo", 
-    "grama", "operacaoBooleana", "bloco", "definicao_if", "definicao_while", 
-    "definicao_variavel"
+    "invalidRule", "type", "expressao", "definicao_variavel", "operacaoBooleana", 
+    "grama", "argumento", "declaracaoSimbolo", "chamadaFuncao", "atribuicaoVariavel", 
+    "condicao", "definicao_if", "funcao", "definicao_while", "operacaoAritmetica", 
+    "bloco"
 };
 
 public static final boolean[] decisionCanBacktrack = new boolean[] {
@@ -225,7 +226,7 @@ protected boolean evalPredicate(boolean result, String predicate) {
                 {
                 int LA2_2 = input.LA(2);
 
-                if ( (LA2_2==43) ) {
+                if ( (LA2_2==44) ) {
                     alt2=2;
                 }
                 else if ( (LA2_2==LPAREN) ) {
@@ -275,7 +276,7 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     state._fsp--;
 
                     dbg.location(119,23);
-                    match(input,42,FOLLOW_42_in_bloco332); 
+                    match(input,43,FOLLOW_43_in_bloco332); 
 
                     }
                     break;
@@ -291,7 +292,7 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     state._fsp--;
 
                     dbg.location(120,23);
-                    match(input,42,FOLLOW_42_in_bloco339); 
+                    match(input,43,FOLLOW_43_in_bloco339); 
 
                     }
                     break;
@@ -307,7 +308,7 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     state._fsp--;
 
                     dbg.location(121,18);
-                    match(input,42,FOLLOW_42_in_bloco346); 
+                    match(input,43,FOLLOW_43_in_bloco346); 
 
                     }
                     break;
@@ -675,7 +676,7 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
                 int LA4_0 = input.LA(1);
 
-                if ( (LA4_0==41) ) {
+                if ( (LA4_0==42) ) {
                     alt4=1;
                 }
 
@@ -689,7 +690,7 @@ protected boolean evalPredicate(boolean result, String predicate) {
             	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:146:53: ',' declaracaoSimbolo
             	    {
             	    dbg.location(146,53);
-            	    match(input,41,FOLLOW_41_in_funcao476); 
+            	    match(input,42,FOLLOW_42_in_funcao476); 
             	    dbg.location(146,57);
             	    pushFollow(FOLLOW_declaracaoSimbolo_in_funcao478);
             	    declaracaoSimbolo();
@@ -1145,7 +1146,7 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
                 int LA8_0 = input.LA(1);
 
-                if ( (LA8_0==41) ) {
+                if ( (LA8_0==42) ) {
                     alt8=1;
                 }
 
@@ -1159,7 +1160,7 @@ protected boolean evalPredicate(boolean result, String predicate) {
             	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:174:30: ',' ( argumento )
             	    {
             	    dbg.location(174,30);
-            	    match(input,41,FOLLOW_41_in_chamadaFuncao630); 
+            	    match(input,42,FOLLOW_42_in_chamadaFuncao630); 
             	    dbg.location(174,34);
             	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:174:34: ( argumento )
             	    dbg.enterAlt(1);
@@ -1231,7 +1232,7 @@ protected boolean evalPredicate(boolean result, String predicate) {
             dbg.location(178,5);
             match(input,ID,FOLLOW_ID_in_atribuicaoVariavel652); 
             dbg.location(178,8);
-            match(input,43,FOLLOW_43_in_atribuicaoVariavel654); 
+            match(input,44,FOLLOW_44_in_atribuicaoVariavel654); 
             dbg.location(178,12);
             pushFollow(FOLLOW_expressao_in_atribuicaoVariavel656);
             expressao();
@@ -1280,7 +1281,7 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
             switch ( input.LA(1) ) {
             case RPAREN:
-            case 42:
+            case 43:
                 {
                 alt10=1;
                 }
@@ -1435,7 +1436,7 @@ protected boolean evalPredicate(boolean result, String predicate) {
                 if ( (LA11_1==LPAREN) ) {
                     alt11=6;
                 }
-                else if ( (LA11_1==AND||LA11_1==EQUAL||(LA11_1 >= GREATER && LA11_1 <= GREATEREQUAL)||(LA11_1 >= LESS && LA11_1 <= LESSEQUAL)||(LA11_1 >= MINUS && LA11_1 <= NOTEQUAL)||(LA11_1 >= OR && LA11_1 <= PLUS)||(LA11_1 >= RPAREN && LA11_1 <= STAR)||(LA11_1 >= 41 && LA11_1 <= 42)) ) {
+                else if ( (LA11_1==AND||LA11_1==EQUAL||(LA11_1 >= GREATER && LA11_1 <= GREATEREQUAL)||(LA11_1 >= LESS && LA11_1 <= LESSEQUAL)||(LA11_1 >= MINUS && LA11_1 <= NOTEQUAL)||(LA11_1 >= OR && LA11_1 <= PLUS)||(LA11_1 >= RPAREN && LA11_1 <= STAR)||(LA11_1 >= 42 && LA11_1 <= 43)) ) {
                     alt11=1;
                 }
                 else {
@@ -1629,12 +1630,12 @@ protected boolean evalPredicate(boolean result, String predicate) {
     public static final BitSet FOLLOW_LCURLY_in_grama314 = new BitSet(new long[]{0x0000017820018000L});
     public static final BitSet FOLLOW_bloco_in_grama316 = new BitSet(new long[]{0x0000017820018000L});
     public static final BitSet FOLLOW_RCURLY_in_grama319 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_definicao_variavel_in_bloco330 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_42_in_bloco332 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_atribuicaoVariavel_in_bloco337 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_42_in_bloco339 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_chamadaFuncao_in_bloco344 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_42_in_bloco346 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_definicao_variavel_in_bloco330 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_43_in_bloco332 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_atribuicaoVariavel_in_bloco337 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_43_in_bloco339 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_chamadaFuncao_in_bloco344 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_43_in_bloco346 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_definicao_if_in_bloco351 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_definicao_while_in_bloco356 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_WHILE_in_definicao_while367 = new BitSet(new long[]{0x0000000000200000L});
@@ -1660,9 +1661,9 @@ protected boolean evalPredicate(boolean result, String predicate) {
     public static final BitSet FOLLOW_type_in_funcao467 = new BitSet(new long[]{0x0000000000008000L});
     public static final BitSet FOLLOW_declaracaoSimbolo_in_funcao469 = new BitSet(new long[]{0x0000000000200000L});
     public static final BitSet FOLLOW_LPAREN_in_funcao471 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_declaracaoSimbolo_in_funcao473 = new BitSet(new long[]{0x0000020040000000L});
-    public static final BitSet FOLLOW_41_in_funcao476 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_declaracaoSimbolo_in_funcao478 = new BitSet(new long[]{0x0000020040000000L});
+    public static final BitSet FOLLOW_declaracaoSimbolo_in_funcao473 = new BitSet(new long[]{0x0000040040000000L});
+    public static final BitSet FOLLOW_42_in_funcao476 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_declaracaoSimbolo_in_funcao478 = new BitSet(new long[]{0x0000040040000000L});
     public static final BitSet FOLLOW_RPAREN_in_funcao482 = new BitSet(new long[]{0x0000000000040000L});
     public static final BitSet FOLLOW_LCURLY_in_funcao484 = new BitSet(new long[]{0x0000017800018000L});
     public static final BitSet FOLLOW_bloco_in_funcao486 = new BitSet(new long[]{0x0000000020000000L});
@@ -1681,13 +1682,13 @@ protected boolean evalPredicate(boolean result, String predicate) {
     public static final BitSet FOLLOW_operacaoBooleana_in_condicao550 = new BitSet(new long[]{0x0000000200028820L});
     public static final BitSet FOLLOW_argumento_in_condicao554 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ID_in_chamadaFuncao619 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_LPAREN_in_chamadaFuncao621 = new BitSet(new long[]{0x0000020240028820L});
-    public static final BitSet FOLLOW_argumento_in_chamadaFuncao624 = new BitSet(new long[]{0x0000020040000000L});
-    public static final BitSet FOLLOW_41_in_chamadaFuncao630 = new BitSet(new long[]{0x0000000200028820L});
-    public static final BitSet FOLLOW_argumento_in_chamadaFuncao633 = new BitSet(new long[]{0x0000020040000000L});
+    public static final BitSet FOLLOW_LPAREN_in_chamadaFuncao621 = new BitSet(new long[]{0x0000040240028820L});
+    public static final BitSet FOLLOW_argumento_in_chamadaFuncao624 = new BitSet(new long[]{0x0000040040000000L});
+    public static final BitSet FOLLOW_42_in_chamadaFuncao630 = new BitSet(new long[]{0x0000000200028820L});
+    public static final BitSet FOLLOW_argumento_in_chamadaFuncao633 = new BitSet(new long[]{0x0000040040000000L});
     public static final BitSet FOLLOW_RPAREN_in_chamadaFuncao639 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_atribuicaoVariavel652 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_43_in_atribuicaoVariavel654 = new BitSet(new long[]{0x0000000200228820L});
+    public static final BitSet FOLLOW_ID_in_atribuicaoVariavel652 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_44_in_atribuicaoVariavel654 = new BitSet(new long[]{0x0000000200228820L});
     public static final BitSet FOLLOW_expressao_in_atribuicaoVariavel656 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_argumento_in_expressao672 = new BitSet(new long[]{0x0000000190800002L});
     public static final BitSet FOLLOW_operacaoAritmetica_in_expressao675 = new BitSet(new long[]{0x0000000200228820L});
