@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g 2012-10-03 12:01:21
+// $ANTLR 3.4 C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g 2012-10-07 20:07:12
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -148,36 +148,13 @@ public class gramaLexer extends Lexer {
     }
     // $ANTLR end "GREATER"
 
-    // $ANTLR start "GREATEREQUAL"
-    public final void mGREATEREQUAL() throws RecognitionException {
-        try {
-            int _type = GREATEREQUAL;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:10:2: ( '>=' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:10:4: '>='
-            {
-            match(">="); 
-
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        	// do for sure before leaving
-        }
-    }
-    // $ANTLR end "GREATEREQUAL"
-
     // $ANTLR start "LESSEQUAL"
     public final void mLESSEQUAL() throws RecognitionException {
         try {
             int _type = LESSEQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:14:2: ( '<=' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:14:4: '<='
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:10:2: ( '<=' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:10:4: '<='
             {
             match("<="); 
 
@@ -199,8 +176,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = LESS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:18:2: ( '<' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:18:4: '<'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:14:2: ( '<' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:14:4: '<'
             {
             match('<'); 
 
@@ -220,8 +197,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = WHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:22:2: ( 'while' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:22:4: 'while'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:18:2: ( 'while' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:18:4: 'while'
             {
             match("while"); 
 
@@ -243,8 +220,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = IF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:26:2: ( 'if' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:26:4: 'if'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:22:2: ( 'if' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:22:4: 'if'
             {
             match("if"); 
 
@@ -266,8 +243,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = LCURLY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:30:2: ( '{' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:30:4: '{'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:26:2: ( '{' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:26:4: '{'
             {
             match('{'); 
 
@@ -287,8 +264,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = RCURLY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:34:2: ( '}' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:34:4: '}'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:30:2: ( '}' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:30:4: '}'
             {
             match('}'); 
 
@@ -308,8 +285,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = ELSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:38:2: ( 'else' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:38:4: 'else'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:34:2: ( 'else' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:34:4: 'else'
             {
             match("else"); 
 
@@ -331,8 +308,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = LPAREN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:42:2: ( '(' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:42:4: '('
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:38:2: ( '(' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:38:4: '('
             {
             match('('); 
 
@@ -352,8 +329,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = RPAREN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:46:2: ( ')' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:46:4: ')'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:42:2: ( ')' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:42:4: ')'
             {
             match(')'); 
 
@@ -373,8 +350,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = MAIN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:50:2: ( 'main ' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:50:4: 'main '
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:46:2: ( 'main ' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:46:4: 'main '
             {
             match("main "); 
 
@@ -396,8 +373,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = T_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:54:2: ( 'int' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:54:4: 'int'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:50:2: ( 'int' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:50:4: 'int'
             {
             match("int"); 
 
@@ -419,8 +396,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = T_CHAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:58:2: ( 'char' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:58:4: 'char'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:54:2: ( 'char' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:54:4: 'char'
             {
             match("char"); 
 
@@ -442,8 +419,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = T_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:62:2: ( 'string' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:62:4: 'string'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:58:2: ( 'string' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:58:4: 'string'
             {
             match("string"); 
 
@@ -465,8 +442,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = T_FLOAT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:66:2: ( 'float' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:66:4: 'float'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:62:2: ( 'float' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:62:4: 'float'
             {
             match("float"); 
 
@@ -488,8 +465,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = TRUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:70:2: ( 'true' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:70:4: 'true'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:66:2: ( 'true' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:66:4: 'true'
             {
             match("true"); 
 
@@ -511,8 +488,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = FALSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:74:2: ( 'false' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:74:4: 'false'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:70:2: ( 'false' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:70:4: 'false'
             {
             match("false"); 
 
@@ -534,8 +511,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = NOTEQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:78:2: ( '!=' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:78:4: '!='
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:74:2: ( '!=' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:74:4: '!='
             {
             match("!="); 
 
@@ -557,8 +534,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:82:2: ( '==' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:82:4: '=='
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:78:2: ( '==' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:78:4: '=='
             {
             match("=="); 
 
@@ -580,8 +557,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = NOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:86:2: ( '~' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:86:4: '~'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:82:2: ( '~' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:82:4: '~'
             {
             match('~'); 
 
@@ -601,8 +578,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = OR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:90:2: ( '||' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:90:4: '||'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:86:2: ( '||' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:86:4: '||'
             {
             match("||"); 
 
@@ -624,8 +601,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = AND;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:94:2: ( '&&' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:94:4: '&&'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:90:2: ( '&&' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:90:4: '&&'
             {
             match("&&"); 
 
@@ -647,8 +624,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:98:2: ( '+' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:98:4: '+'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:94:2: ( '+' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:94:4: '+'
             {
             match('+'); 
 
@@ -668,8 +645,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = MINUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:102:2: ( '-' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:102:4: '-'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:98:2: ( '-' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:98:4: '-'
             {
             match('-'); 
 
@@ -689,8 +666,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = STAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:106:2: ( '*' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:106:4: '*'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:102:2: ( '*' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:102:4: '*'
             {
             match('*'); 
 
@@ -710,8 +687,8 @@ public class gramaLexer extends Lexer {
         try {
             int _type = SLASH;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:110:2: ( '/' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:110:4: '/'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:106:2: ( '/' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:106:4: '/'
             {
             match('/'); 
 
@@ -726,13 +703,36 @@ public class gramaLexer extends Lexer {
     }
     // $ANTLR end "SLASH"
 
+    // $ANTLR start "GREATEREQUAL"
+    public final void mGREATEREQUAL() throws RecognitionException {
+        try {
+            int _type = GREATEREQUAL;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:109:2: ( '>=' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:109:4: '>='
+            {
+            match(">="); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "GREATEREQUAL"
+
     // $ANTLR start "ID"
     public final void mID() throws RecognitionException {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:206:2: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:206:4: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:205:2: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:205:4: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -744,7 +744,7 @@ public class gramaLexer extends Lexer {
             }
 
 
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:206:28: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:205:28: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop1:
             do {
                 int alt1=2;
@@ -794,10 +794,10 @@ public class gramaLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:209:5: ( ( '0' .. '9' )+ )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:209:7: ( '0' .. '9' )+
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:208:5: ( ( '0' .. '9' )+ )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:208:7: ( '0' .. '9' )+
             {
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:209:7: ( '0' .. '9' )+
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:208:7: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -852,10 +852,10 @@ public class gramaLexer extends Lexer {
         try {
             int _type = FLOAT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:213:3: ( ( INT )+ '.' ( INT )+ )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:213:5: ( INT )+ '.' ( INT )+
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:212:3: ( ( INT )+ '.' ( INT )+ )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:212:5: ( INT )+ '.' ( INT )+
             {
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:213:5: ( INT )+
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:212:5: ( INT )+
             int cnt3=0;
             loop3:
             do {
@@ -869,7 +869,7 @@ public class gramaLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:213:5: INT
+            	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:212:5: INT
             	    {
             	    mINT(); 
 
@@ -889,7 +889,7 @@ public class gramaLexer extends Lexer {
 
             match('.'); 
 
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:213:14: ( INT )+
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:212:14: ( INT )+
             int cnt4=0;
             loop4:
             do {
@@ -903,7 +903,7 @@ public class gramaLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:213:14: INT
+            	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:212:14: INT
             	    {
             	    mINT(); 
 
@@ -937,7 +937,7 @@ public class gramaLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:217:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:216:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -967,13 +967,13 @@ public class gramaLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:217:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:216:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
                     {
                     match("//"); 
 
 
 
-                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:217:14: (~ ( '\\n' | '\\r' ) )*
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:216:14: (~ ( '\\n' | '\\r' ) )*
                     loop5:
                     do {
                         int alt5=2;
@@ -1007,7 +1007,7 @@ public class gramaLexer extends Lexer {
                     } while (true);
 
 
-                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:217:28: ( '\\r' )?
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:216:28: ( '\\r' )?
                     int alt6=2;
                     int LA6_0 = input.LA(1);
 
@@ -1016,7 +1016,7 @@ public class gramaLexer extends Lexer {
                     }
                     switch (alt6) {
                         case 1 :
-                            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:217:28: '\\r'
+                            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:216:28: '\\r'
                             {
                             match('\r'); 
 
@@ -1033,13 +1033,13 @@ public class gramaLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:218:9: '/*' ( options {greedy=false; } : . )* '*/'
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:217:9: '/*' ( options {greedy=false; } : . )* '*/'
                     {
                     match("/*"); 
 
 
 
-                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:218:14: ( options {greedy=false; } : . )*
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:217:14: ( options {greedy=false; } : . )*
                     loop7:
                     do {
                         int alt7=2;
@@ -1064,7 +1064,7 @@ public class gramaLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:218:42: .
+                    	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:217:42: .
                     	    {
                     	    matchAny(); 
 
@@ -1101,12 +1101,12 @@ public class gramaLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:222:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:222:8: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:221:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:221:8: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
             {
             match('\"'); 
 
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:222:12: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:221:12: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
             loop9:
             do {
                 int alt9=3;
@@ -1122,7 +1122,7 @@ public class gramaLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:222:14: ESC_SEQ
+            	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:221:14: ESC_SEQ
             	    {
             	    mESC_SEQ(); 
 
@@ -1130,7 +1130,7 @@ public class gramaLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:222:24: ~ ( '\\\\' | '\"' )
+            	    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:221:24: ~ ( '\\\\' | '\"' )
             	    {
             	    if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '!')||(input.LA(1) >= '#' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
             	        input.consume();
@@ -1169,12 +1169,12 @@ public class gramaLexer extends Lexer {
         try {
             int _type = CHAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:225:5: ( '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\'' )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:225:8: '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\''
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:224:5: ( '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\'' )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:224:8: '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\''
             {
             match('\''); 
 
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:225:13: ( ESC_SEQ |~ ( '\\'' | '\\\\' ) )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:224:13: ( ESC_SEQ |~ ( '\\'' | '\\\\' ) )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1193,7 +1193,7 @@ public class gramaLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:225:15: ESC_SEQ
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:224:15: ESC_SEQ
                     {
                     mESC_SEQ(); 
 
@@ -1201,7 +1201,7 @@ public class gramaLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:225:25: ~ ( '\\'' | '\\\\' )
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:224:25: ~ ( '\\'' | '\\\\' )
                     {
                     if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '&')||(input.LA(1) >= '(' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
                         input.consume();
@@ -1235,7 +1235,7 @@ public class gramaLexer extends Lexer {
     // $ANTLR start "HEX_DIGIT"
     public final void mHEX_DIGIT() throws RecognitionException {
         try {
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:230:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:229:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
             // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:
             {
             if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'F')||(input.LA(1) >= 'a' && input.LA(1) <= 'f') ) {
@@ -1261,7 +1261,7 @@ public class gramaLexer extends Lexer {
     // $ANTLR start "ESC_SEQ"
     public final void mESC_SEQ() throws RecognitionException {
         try {
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:234:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:233:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
             int alt11=3;
             int LA11_0 = input.LA(1);
 
@@ -1314,7 +1314,7 @@ public class gramaLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:234:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:233:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
                     {
                     match('\\'); 
 
@@ -1331,7 +1331,7 @@ public class gramaLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:235:9: UNICODE_ESC
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:234:9: UNICODE_ESC
                     {
                     mUNICODE_ESC(); 
 
@@ -1339,7 +1339,7 @@ public class gramaLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:236:9: OCTAL_ESC
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:235:9: OCTAL_ESC
                     {
                     mOCTAL_ESC(); 
 
@@ -1359,7 +1359,7 @@ public class gramaLexer extends Lexer {
     // $ANTLR start "OCTAL_ESC"
     public final void mOCTAL_ESC() throws RecognitionException {
         try {
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:241:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:240:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
             int alt12=3;
             int LA12_0 = input.LA(1);
 
@@ -1410,7 +1410,7 @@ public class gramaLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:241:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:240:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     match('\\'); 
 
@@ -1447,7 +1447,7 @@ public class gramaLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:242:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:241:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     match('\\'); 
 
@@ -1474,7 +1474,7 @@ public class gramaLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:243:9: '\\\\' ( '0' .. '7' )
+                    // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:242:9: '\\\\' ( '0' .. '7' )
                     {
                     match('\\'); 
 
@@ -1503,8 +1503,8 @@ public class gramaLexer extends Lexer {
     // $ANTLR start "UNICODE_ESC"
     public final void mUNICODE_ESC() throws RecognitionException {
         try {
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:248:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
-            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:248:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:247:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
+            // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:247:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
             {
             match('\\'); 
 
@@ -1533,7 +1533,7 @@ public class gramaLexer extends Lexer {
     // $ANTLR end "UNICODE_ESC"
 
     public void mTokens() throws RecognitionException {
-        // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:8: ( T__41 | T__42 | T__43 | GREATER | GREATEREQUAL | LESSEQUAL | LESS | WHILE | IF | LCURLY | RCURLY | ELSE | LPAREN | RPAREN | MAIN | T_INT | T_CHAR | T_STRING | T_FLOAT | TRUE | FALSE | NOTEQUAL | EQUAL | NOT | OR | AND | PLUS | MINUS | STAR | SLASH | ID | INT | FLOAT | COMMENT | STRING | CHAR )
+        // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:8: ( T__41 | T__42 | T__43 | GREATER | LESSEQUAL | LESS | WHILE | IF | LCURLY | RCURLY | ELSE | LPAREN | RPAREN | MAIN | T_INT | T_CHAR | T_STRING | T_FLOAT | TRUE | FALSE | NOTEQUAL | EQUAL | NOT | OR | AND | PLUS | MINUS | STAR | SLASH | GREATEREQUAL | ID | INT | FLOAT | COMMENT | STRING | CHAR )
         int alt13=36;
         alt13 = dfa13.predict(input);
         switch (alt13) {
@@ -1570,209 +1570,209 @@ public class gramaLexer extends Lexer {
                 }
                 break;
             case 5 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:36: GREATEREQUAL
-                {
-                mGREATEREQUAL(); 
-
-
-                }
-                break;
-            case 6 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:49: LESSEQUAL
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:36: LESSEQUAL
                 {
                 mLESSEQUAL(); 
 
 
                 }
                 break;
-            case 7 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:59: LESS
+            case 6 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:46: LESS
                 {
                 mLESS(); 
 
 
                 }
                 break;
-            case 8 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:64: WHILE
+            case 7 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:51: WHILE
                 {
                 mWHILE(); 
 
 
                 }
                 break;
-            case 9 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:70: IF
+            case 8 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:57: IF
                 {
                 mIF(); 
 
 
                 }
                 break;
-            case 10 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:73: LCURLY
+            case 9 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:60: LCURLY
                 {
                 mLCURLY(); 
 
 
                 }
                 break;
-            case 11 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:80: RCURLY
+            case 10 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:67: RCURLY
                 {
                 mRCURLY(); 
 
 
                 }
                 break;
-            case 12 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:87: ELSE
+            case 11 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:74: ELSE
                 {
                 mELSE(); 
 
 
                 }
                 break;
-            case 13 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:92: LPAREN
+            case 12 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:79: LPAREN
                 {
                 mLPAREN(); 
 
 
                 }
                 break;
-            case 14 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:99: RPAREN
+            case 13 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:86: RPAREN
                 {
                 mRPAREN(); 
 
 
                 }
                 break;
-            case 15 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:106: MAIN
+            case 14 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:93: MAIN
                 {
                 mMAIN(); 
 
 
                 }
                 break;
-            case 16 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:111: T_INT
+            case 15 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:98: T_INT
                 {
                 mT_INT(); 
 
 
                 }
                 break;
-            case 17 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:117: T_CHAR
+            case 16 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:104: T_CHAR
                 {
                 mT_CHAR(); 
 
 
                 }
                 break;
-            case 18 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:124: T_STRING
+            case 17 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:111: T_STRING
                 {
                 mT_STRING(); 
 
 
                 }
                 break;
-            case 19 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:133: T_FLOAT
+            case 18 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:120: T_FLOAT
                 {
                 mT_FLOAT(); 
 
 
                 }
                 break;
-            case 20 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:141: TRUE
+            case 19 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:128: TRUE
                 {
                 mTRUE(); 
 
 
                 }
                 break;
-            case 21 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:146: FALSE
+            case 20 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:133: FALSE
                 {
                 mFALSE(); 
 
 
                 }
                 break;
-            case 22 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:152: NOTEQUAL
+            case 21 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:139: NOTEQUAL
                 {
                 mNOTEQUAL(); 
 
 
                 }
                 break;
-            case 23 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:161: EQUAL
+            case 22 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:148: EQUAL
                 {
                 mEQUAL(); 
 
 
                 }
                 break;
-            case 24 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:167: NOT
+            case 23 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:154: NOT
                 {
                 mNOT(); 
 
 
                 }
                 break;
-            case 25 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:171: OR
+            case 24 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:158: OR
                 {
                 mOR(); 
 
 
                 }
                 break;
-            case 26 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:174: AND
+            case 25 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:161: AND
                 {
                 mAND(); 
 
 
                 }
                 break;
-            case 27 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:178: PLUS
+            case 26 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:165: PLUS
                 {
                 mPLUS(); 
 
 
                 }
                 break;
-            case 28 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:183: MINUS
+            case 27 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:170: MINUS
                 {
                 mMINUS(); 
 
 
                 }
                 break;
-            case 29 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:189: STAR
+            case 28 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:176: STAR
                 {
                 mSTAR(); 
 
 
                 }
                 break;
-            case 30 :
-                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:194: SLASH
+            case 29 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:181: SLASH
                 {
                 mSLASH(); 
+
+
+                }
+                break;
+            case 30 :
+                // C:\\Users\\Matheus\\workspace\\INE5426-Compiladores\\grama.g:1:187: GREATEREQUAL
+                {
+                mGREATEREQUAL(); 
 
 
                 }
@@ -1854,11 +1854,11 @@ public class gramaLexer extends Lexer {
         "\172\1\40\1\172\1\156\1\164\1\145\2\172\3\uffff\1\147\2\172\2\uffff"+
         "\1\172\3\uffff";
     static final String DFA13_acceptS =
-        "\1\uffff\1\1\1\2\5\uffff\1\12\1\13\1\uffff\1\15\1\16\5\uffff\1\26"+
-        "\1\30\1\31\1\32\1\33\1\34\1\35\1\uffff\1\37\1\uffff\1\43\1\44\1"+
-        "\27\1\3\1\5\1\4\1\6\1\7\12\uffff\1\42\1\36\1\40\1\41\1\uffff\1\11"+
-        "\11\uffff\1\20\10\uffff\1\14\1\17\1\21\3\uffff\1\24\1\10\1\uffff"+
-        "\1\23\1\25\1\22";
+        "\1\uffff\1\1\1\2\5\uffff\1\11\1\12\1\uffff\1\14\1\15\5\uffff\1\25"+
+        "\1\27\1\30\1\31\1\32\1\33\1\34\1\uffff\1\37\1\uffff\1\43\1\44\1"+
+        "\26\1\3\1\36\1\4\1\5\1\6\12\uffff\1\42\1\35\1\40\1\41\1\uffff\1"+
+        "\10\11\uffff\1\17\10\uffff\1\13\1\16\1\20\3\uffff\1\23\1\7\1\uffff"+
+        "\1\22\1\24\1\21";
     static final String DFA13_specialS =
         "\122\uffff}>";
     static final String[] DFA13_transitionS = {
@@ -1979,7 +1979,7 @@ public class gramaLexer extends Lexer {
             this.transition = DFA13_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__41 | T__42 | T__43 | GREATER | GREATEREQUAL | LESSEQUAL | LESS | WHILE | IF | LCURLY | RCURLY | ELSE | LPAREN | RPAREN | MAIN | T_INT | T_CHAR | T_STRING | T_FLOAT | TRUE | FALSE | NOTEQUAL | EQUAL | NOT | OR | AND | PLUS | MINUS | STAR | SLASH | ID | INT | FLOAT | COMMENT | STRING | CHAR );";
+            return "1:1: Tokens : ( T__41 | T__42 | T__43 | GREATER | LESSEQUAL | LESS | WHILE | IF | LCURLY | RCURLY | ELSE | LPAREN | RPAREN | MAIN | T_INT | T_CHAR | T_STRING | T_FLOAT | TRUE | FALSE | NOTEQUAL | EQUAL | NOT | OR | AND | PLUS | MINUS | STAR | SLASH | GREATEREQUAL | ID | INT | FLOAT | COMMENT | STRING | CHAR );";
         }
     }
  

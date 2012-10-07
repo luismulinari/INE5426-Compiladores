@@ -6,10 +6,6 @@ GREATER
 	:	'>'
 	;
 
-GREATEREQUAL
-	:	'>='
-	;
-
 LESSEQUAL
 	:	'<='
 	;
@@ -109,6 +105,9 @@ STAR
 SLASH
 	:	'/'
 	;
+GREATEREQUAL
+	:	'>='
+	;
 // FIM TOKENS
 	
 
@@ -165,10 +164,10 @@ operacaoBooleana
 	| OR
 	| AND
 	| NOT
-	| GREATER
 	| LESS
-	| GREATEREQUAL
+	| GREATER
 	| LESSEQUAL
+	| GREATEREQUAL
 	;
 
 chamadaFuncao
